@@ -1,0 +1,1216 @@
+@prefix : <http://purl.org/ontology/onfraud#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/elements/1.1/> .
+@base <http://purl.org/ontology/onfraud#> .
+
+<http://purl.org/ontology/onfraud#> rdf:type owl:Ontology ;
+                                     owl:imports <http://www.w3.org/ns/org#> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  gr:hasCurrencyValue
+<gr:hasCurrencyValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/goodrelations/v1valueAddedTaxIncluded
+<http://purl.org/goodrelations/v1valueAddedTaxIncluded> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/goodrelations/v1#hasCurrency
+gr:hasCurrency rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/procurement/public-contracts#actualPrice
+<http://purl.org/procurement/public-contracts#actualPrice> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/procurement/public-contracts#contractingAuthority
+<http://purl.org/procurement/public-contracts#contractingAuthority> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/procurement/public-contracts#supplier
+<http://purl.org/procurement/public-contracts#supplier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/purchase2pay/individuals/notice
+<http://purl.org/purchase2pay/individuals/notice> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/purchase2pay/individuals/noticeDate
+<http://purl.org/purchase2pay/individuals/noticeDate> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#label
+rdf:label rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/org#hasUnit
+<http://www.w3.org/ns/org#hasUnit> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/ontology/onfraud#influencia
+:influencia rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/ontology/onfraud#afectaA
+:afectaA rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :PerjuicioEconómico ;
+         rdfs:range <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://purl.org/ontology/onfraud#causaPerjuicioEconomico
+:causaPerjuicioEconomico rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Defraudador ;
+                         rdfs:range :PerjuicioEconómico ,
+                                    <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://purl.org/ontology/onfraud#contrataInvestigacion
+:contrataInvestigacion rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain :Victima ;
+                       rdfs:range :EmpresaInvestigacion .
+
+
+###  http://purl.org/ontology/onfraud#engaña
+:engaña rdf:type owl:ObjectProperty ;
+        rdfs:domain :DefraudadorExterno ;
+        rdfs:range <http://www.w3.org/ns/org#Organization> .
+
+
+###  http://purl.org/ontology/onfraud#esInvestigado
+:esInvestigado rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :DefraudadorInterno ;
+               rdfs:range :EmpresaInvestigacion .
+
+
+###  http://purl.org/ontology/onfraud#estaAsociadoCon
+:estaAsociadoCon rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://purl.org/ontology/onfraud#realizaInvestigacion
+:realizaInvestigacion rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain :EmpresaInvestigacion ;
+                      rdfs:range :Victima .
+
+
+###  http://purl.org/ontology/onfraud#tieneEquipoInvestigacion
+:tieneEquipoInvestigacion rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain :EmpresaInvestigacion .
+
+
+###  http://purl.org/ontology/onfraud#tieneRedFlag
+:tieneRedFlag rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://purl.org/ontology/onfraud#worksIn
+:worksIn rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain :Redflag ;
+                      rdfs:range :Fraude .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/ontology/onfraud#descripcion
+:descripcion rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://purl.org/ontology/onfraud#descripcionRedFlag
+:descripcionRedFlag rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://purl.org/ontology/onfraud#idFraude
+:idFraude rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Fraude ;
+          rdfs:range xsd:string .
+
+
+###  http://purl.org/ontology/onfraud#perjuicio
+:perjuicio rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Fraude ,
+                       :PerjuicioEconómico ;
+           rdfs:range owl:real .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :Redflag ;
+                    rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/ontology/onfraud#ApropiacionDeActivos
+:ApropiacionDeActivos rdf:type owl:Class ;
+                      rdfs:subClassOf :FraudeInterno ;
+                      rdf:label "Apropiación de activos"@es ,
+                                "Asset Misappropriation"@en ;
+                      rdfs:comment "Asset misappropriation fraud happens when people who are entrusted to manage the assets of an organisation steal from it or misuses these assets."@en ,
+                                   "Consiste en apropiarse de activos financieros o no financieros de la organización, bien robándolos, bien realizando un uso indebido de éstos"@es .
+
+
+###  http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaFinanciera
+:ApropiaciónDeActivosDeNaturalezaFinanciera rdf:type owl:Class ;
+                                            rdfs:subClassOf :ApropiacionDeActivos ;
+                                            owl:disjointWith :ApropiaciónDeActivosDeNaturalezaNoFinanciera ;
+                                            rdf:label "Apropiación de fondos"@es ,
+                                                      "Asset Misappropriation of Cash"@en ;
+                                            rdfs:comment "Both Cash and financial asset missapropriation schemes"@en ,
+                                                         "Esquemas de apropiación de activos financieros o monetarios"@es .
+
+
+###  http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaNoFinanciera
+:ApropiaciónDeActivosDeNaturalezaNoFinanciera rdf:type owl:Class ;
+                                              rdfs:subClassOf :ApropiacionDeActivos ;
+                                              rdf:label "Apropiación de Activos No Financieros"@en ,
+                                                        "Non-Cash Asset Missapropriation"@en ;
+                                              rdfs:comment "Esquemas de apropiación de activos no financieros de la organización"@es ,
+                                                           "Non financial asset missapropriation schemes"@en .
+
+
+###  http://purl.org/ontology/onfraud#ConflictoDeInteres
+:ConflictoDeInteres rdf:type owl:Class ;
+                    rdfs:subClassOf :Corrupción ;
+                    rdf:label "Conflict of interest"@en ,
+                              "Conflicto de Interés"@es ;
+                    rdfs:comment "Situación en la que una persona u organización tiene intereses financieros o de otro tipo con terceros que podrían corromper la motivación o la toma de decisiones de ese individuo u organización."@en ,
+                                 "Situation in which a person or organization is involved in multiple interests, financial or otherwise, one of which could possibly corrupt the motivation or decision-making of that individual or organization."@en .
+
+
+###  http://purl.org/ontology/onfraud#Corrupción
+:Corrupción rdf:type owl:Class ;
+            rdfs:subClassOf :FraudeInterno ;
+            rdf:label "Corrupción"@es ,
+                      "Corruption"@en ;
+            rdfs:comment "A scheme in which an employee misuses his or her influence in a business transaction in a way that violates his or her duty to the employer in order to gain a direct or indirect benefit."@en ,
+                         "El empleado hace un uso indebido de su influencia en una transacción comercial de una manera que viola su deber para con el empleador a fin de obtener un beneficio directo o indirecto, para él o para la organización"@es .
+
+
+###  http://purl.org/ontology/onfraud#Defraudador
+:Defraudador rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+
+
+###  http://purl.org/ontology/onfraud#DefraudadorExterno
+:DefraudadorExterno rdf:type owl:Class ;
+                    rdfs:subClassOf :Defraudador ;
+                    rdf:label "Defraudador Externo"@es ,
+                              "External Fraudster"@en ;
+                    rdfs:comment "Organization or person that commits a fraud against another Agent"@en ,
+                                 "Tercero que comete un fraude contra una persona u organización"@es .
+
+
+###  http://purl.org/ontology/onfraud#DefraudadorInterno
+:DefraudadorInterno rdf:type owl:Class ;
+                    rdfs:subClassOf :Defraudador ,
+                                    :Empleado ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :causaPerjuicioEconomico ;
+                                      owl:someValuesFrom <http://www.w3.org/ns/org#Organization>
+                                    ] ;
+                    rdf:label "Defraudador Interno"@es ,
+                              "Internal Fraudster"@en ;
+                    rdfs:comment "Empleado que comete un fraude contra su empresa"@es ,
+                                 "Employee who commits fraud against its Employer"@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsoIndebido
+:DesembolsoIndebido rdf:type owl:Class ;
+                    rdfs:subClassOf :ApropiaciónDeActivosDeNaturalezaFinanciera ;
+                    rdf:label "Desembolsos Indebidos"@es ,
+                              "Fraudulent Disbursement"@en ;
+                    rdfs:comment "A scheme that occurs when an employee uses his position of employment to cause a payment for some inappropriate purpose."@en ,
+                                 "Este esquema ocurre cuando un empleado utiliza su posición para que la organización realice un pago para un propósito indebido"@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteracionCheques
+:DesembolsosIndebidosAlteracionCheques rdf:type owl:Class ;
+                                       rdfs:subClassOf :DesembolsoIndebido ;
+                                       rdf:label "Alteración de cheques"@es ,
+                                                 "Check Tampering"@en ;
+                                       rdfs:comment "A scheme in which a person steals his or her employer’s funds by intercepting, forging or altering a check or electronic payment drawn on one of the organization’s bank accounts."@en ,
+                                                    "Se produce cuando el defraudador roba fondos de la organización interceptando, falsificando o alterando un cheque o pago electrónico de una de las cuentas bancarias de la organización"@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteracionEndosoEnCheque
+:DesembolsosIndebidosAlteracionEndosoEnCheque rdf:type owl:Class ;
+                                              rdfs:subClassOf :DesembolsosIndebidosAlteracionCheques ;
+                                              rdf:label "Alteración de endoso"@es ,
+                                                        "Forged Endorsement"@en ;
+                                              rdfs:comment "Este esquema consiste en falsificar la firma de endoso de un receptor de un cheque de la organización."@es ,
+                                                           "Type of check tampering scheme which consists of forging the signature endorsement of an intended recipient of a company check."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteraciónReceptorFondos
+:DesembolsosIndebidosAlteraciónReceptorFondos rdf:type owl:Class ;
+                                              rdfs:subClassOf :DesembolsosIndebidosAlteracionCheques ;
+                                              rdf:label "Alteración del receptor de los fondos"@es ,
+                                                        "Altered Payee"@en ;
+                                              rdfs:comment "Se produce cuando se falsifica o altera la designación del receptor de fondos al defraudador"@es ,
+                                                           "Type of check tampering scheme which involves changing the payee designation on the check to the perpetrator or an accomplice."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosAnulacionesFalsas
+:DesembolsosIndebidosAnulacionesFalsas rdf:type owl:Class ;
+                                       rdfs:subClassOf :DesembolsosIndebidosRegistroDesembolsos ;
+                                       owl:disjointWith :DesembolsosIndebidosDevoluciónFalsos ;
+                                       rdf:label "Anulaciones falsas"@es ,
+                                                 "False Void"@en ;
+                                       rdfs:comment "Está relacionado con las devoluciones de mercancías en las que un defraudador guarda una copia del recibo del cliente en el momento de la venta y luego lo utiliza para crear un vacío ficticio (es decir, como si el cliente devolviera la mercancía)."@es ,
+                                                    "This scheme is related to merchandise returns in which a a fraud perpetrator keeps a copy of the customer’s receipt at the time of sale and later uses it to create a fictitious void (i.e., as if the customer returned the merchandise)."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosComprasPersonales
+:DesembolsosIndebidosComprasPersonales rdf:type owl:Class ;
+                                       rdfs:subClassOf :DesembolsosIndebidosFacturación ;
+                                       rdf:label "Compras personales"@es ,
+                                                 "Personal Purchases"@en ;
+                                       rdfs:comment "Ocurre cuando un empleado pasa una factura a la empresa para que realice el pago o cuando el empleado utiliza una tarjeta de crédito para el pago de una compra personal."@es ,
+                                                    "Type of billing scheme which occurs when an employee submits an invoice for personal purchases to the company for payment, or when an employee uses a company credit card for personal purchases."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosConnivenciaProveedor
+:DesembolsosIndebidosConnivenciaProveedor rdf:type owl:Class ;
+                                          rdfs:subClassOf :DesembolsosIndebidosFacturación ;
+                                          rdf:label "Connivencia con el proveedor"@es ,
+                                                    "Non-Acomplice Vendor"@en ;
+                                          rdfs:comment "Este tipo de fraude ocurre cuando un empleado arregla el sobrepago de una factura de un proveedor y se queda con el excedente del coste real de la factura"@es ,
+                                                       "Type of billing scheme which occurs when an employee arranges for overpayment of a vendor invoice and pockets the overpayment amount when it is returned to the company."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosDevoluciónFalsos
+:DesembolsosIndebidosDevoluciónFalsos rdf:type owl:Class ;
+                                      rdfs:subClassOf :DesembolsosIndebidosRegistroDesembolsos ;
+                                      rdf:label "Devoluciones falsas"@es ,
+                                                "False Refunds"@en ;
+                                      rdfs:comment "Se produce cuando un empleado registra una devolución sin que se esté produciendo"@es ,
+                                                   "Type of register disbursement scheme which occurs when an employee processes a transaction as if a customer were returning merchandise, even though there is no actual return."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosEmisorAutorizado
+:DesembolsosIndebidosEmisorAutorizado rdf:type owl:Class ;
+                                      rdfs:subClassOf :DesembolsosIndebidosAlteracionCheques ;
+                                      rdf:label "Authorized Maker"@en ,
+                                                "Emisor autorizado"@es ;
+                                      rdfs:comment "Ocurre cuando empleados con poderes de firma realizan cheques para su propio beneficio"@es ,
+                                                   "Type of check tampering scheme which occurs when employees with signature authority write fraudulent checks for their own benefit."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosEmpleadosFantasma
+:DesembolsosIndebidosEmpleadosFantasma rdf:type owl:Class ;
+                                       rdfs:subClassOf :DesembolsosIndebidosNómina ;
+                                       rdf:label "Empleados Fantasma"@es ,
+                                                 "Ghost Employees"@en ;
+                                       rdfs:comment "Se produce cuando hay un empleado dado de alta en los registros de nómina de la organización, pero no realiza trabajo para la empresa, bien porque es una persona inventada o porque sea una persona real que no esté realizando labor alguna estando contratada."@es ,
+                                                    "Type of payroll scheme where someone is recorded on the payroll system, but who does not work for the business. The ghost can be a real person who knowingly or not is placed on the payroll, or a fictitious person invented by the dishonest employee."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosEsquemasDeComisión
+:DesembolsosIndebidosEsquemasDeComisión rdf:type owl:Class ;
+                                        rdfs:subClassOf :DesembolsosIndebidosNómina ;
+                                        rdf:label "Commission Schemes"@en ,
+                                                  "esquemas de comisión en pagos indebidos"@es ;
+                                        rdfs:comment "Se produce cuando la comisión por ventas se altera o se modifican las ventas realizadas."@es ,
+                                                     "Type of payroll scheme which occurs when the amount of sales made or the rate of commission is fraudulently inflated."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosFacturación
+:DesembolsosIndebidosFacturación rdf:type owl:Class ;
+                                 rdfs:subClassOf :DesembolsoIndebido ;
+                                 rdf:label "Billing Schemes"@en ,
+                                           "Esquemas de facturación"@es ;
+                                 rdfs:comment "A scheme in which a person causes his or her employer to issue a payment by submitting invoices for fictitious goods or services, inflated invoices or invoices for personal purchases."@en ,
+                                              "El defraudador consigue que su organización realice un pago emitiendo facturas por bienes o servicios ficticios, o bien inflando el importe de las facturas o facturas por compras personales"@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionCheque
+:DesembolsosIndebidosFalsificacionCheque rdf:type owl:Class ;
+                                         rdfs:subClassOf :DesembolsosIndebidosAlteracionCheques ;
+                                         rdf:label "Concealed Check"@en ,
+                                                   "Falsificación del Cheque"@es ;
+                                         rdfs:comment "Ocurre cuando se prepara un cheque falsificado y se junta con otros legítimos para su pago habitual por parte de la empresa, de forma que el emisor del cheque lo firma sin haber sido revisado"@es ,
+                                                      "Type of check tampering scheme which consists of preparing a fraudulent check and submitting it usually along with legitimate checks to an authorized maker who signs it without a proper review."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionEmisorEnCheque
+:DesembolsosIndebidosFalsificacionEmisorEnCheque rdf:type owl:Class ;
+                                                 rdfs:subClassOf :DesembolsosIndebidosAlteracionCheques ;
+                                                 rdf:label "Falsificación de Emisor del Cheque"@es ,
+                                                           "Forged Maker"@en ,
+                                                           "Se produce cuando se altera o falsifica una firma autorizada en un cheque"@es ;
+                                                 rdfs:comment "Type of check tampering scheme which involves forging an authorized signature on a company check."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionSalarios
+:DesembolsosIndebidosFalsificacionSalarios rdf:type owl:Class ;
+                                           rdfs:subClassOf :DesembolsosIndebidosNómina ;
+                                           rdf:label "Falsified Wages"@en ;
+                                           rdfs:comment "Ocurre cuando se paga al empleado un salario sobre la base de tarifas falsificadas u horas no incurridas."@es ,
+                                                        "Type of payroll scheme which occurs when a company pays an employee based on falsified hours or rates"@en ,
+                                                        "falsificación de salarios"@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosFicticios
+:DesembolsosIndebidosGastosFicticios rdf:type owl:Class ;
+                                     rdfs:subClassOf :DesembolsosIndebidosReintegroGastos ;
+                                     rdf:label "Fictitious Expenses"@en ,
+                                               "Gastos ficticios"@es ;
+                                     rdfs:comment "Se da cuando un empleado se inventa un gasto para que la organización se lo pague."@es ,
+                                                  "Type of expense reimbursement scheme which occurs when an employee invents a purchase and seeks reimbursement for it."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosMultiplesReintegros
+:DesembolsosIndebidosGastosMultiplesReintegros rdf:type owl:Class ;
+                                               rdfs:subClassOf :DesembolsosIndebidosReintegroGastos ;
+                                               rdf:label "Multiple Reimbursements"@en ,
+                                                         "Multiples Reintegros"@es ,
+                                                         "Ocurre cuando un empleado solicita que un gasto se le reintegre en múltiples ocasiones."@es ,
+                                                         "occurs when an employee submits a single expense for reimbursement multiple times."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosPersonales
+:DesembolsosIndebidosGastosPersonales rdf:type owl:Class ;
+                                      rdfs:subClassOf :DesembolsosIndebidosReintegroGastos ;
+                                      rdf:label "Mischaracterized Expenses"@en ,
+                                                "Reintegro de gastos personales"@es ;
+                                      rdfs:comment "Este esquema se da cuando un empleado solicita el reembolso de un gasto de naturaleza personal, haciéndolo pasar por un gasto de empresa."@es ,
+                                                   "Type of expense reimbursement scheme which occurs when an employee requests reimbursement for a personal expense, claiming the expense to be business related."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosPorEncimaCoste
+:DesembolsosIndebidosGastosPorEncimaCoste rdf:type owl:Class ;
+                                          rdfs:subClassOf :DesembolsosIndebidosReintegroGastos ;
+                                          rdf:label "Gastos por encima de coste"@es ,
+                                                    "OverstatedExpenses"@en ;
+                                          rdfs:comment "Tipo de reembolsos de gastos que se da cuando un empleado infla el precio o coste de los gastos incurridos para que la organización se los pague."@es ,
+                                                       "Type of expense reimbursement scheme which occurs when an employee overstates the cost of actual expenses and seeks reimbursement."@en .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosNómina
+:DesembolsosIndebidosNómina rdf:type owl:Class ;
+                            rdfs:subClassOf :DesembolsoIndebido ;
+                            rdf:label "Payroll Schemes"@en ,
+                                      "esquemas de nómina"@es ;
+                            rdfs:comment "A scheme in which an employee causes his or her employer to issue a payment by making false claims for compensation."@en ,
+                                         "Ocurre cuando un empleado hace que la organización pague en concepto de nómina o complemento salarial un importe no debido."@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosRegistroDesembolsos
+:DesembolsosIndebidosRegistroDesembolsos rdf:type owl:Class ;
+                                         rdfs:subClassOf :DesembolsoIndebido ;
+                                         rdf:label "Register disbursements"@en ,
+                                                   "registros indebidos de desembolsos"@esr ;
+                                         rdfs:comment "A scheme in which an employee makes false entries on a cash register to conceal the fraudulent removal of cash."@en ,
+                                                      "Se produce cuando el empleado realiza entradas faltas en la contabilidad o registros contables de la organización para realizar una retirada de efectivo."@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosReintegroGastos
+:DesembolsosIndebidosReintegroGastos rdf:type owl:Class ;
+                                     rdfs:subClassOf :DesembolsoIndebido ;
+                                     rdf:label "Expense Reimbursement"@en ,
+                                               "Reintegro de gastos"@es ;
+                                     rdfs:comment "A scheme in which an employee makes a claim for reimbursement of fictitious or inflated business expenses."@en ,
+                                                  "Ocurre cuando el empleado reclama el reintegro de un gasto en el que habría incurrido de naturaleza ficticia o por un importe inflado"@es .
+
+
+###  http://purl.org/ontology/onfraud#DesembolsosIndebidosShellCompany
+:DesembolsosIndebidosShellCompany rdf:type owl:Class ;
+                                  rdfs:subClassOf :DesembolsosIndebidosFacturación ;
+                                  rdf:label "Se produce cuando una empresa ficticia o sin facturación real controlada por el empleado emite facturas a la organización del empleado."@es ,
+                                            "Type of billing scheme which occurs when an employee submits invoices for payment from a fictitious company controlled by the employee."@en ,
+                                            "compañía ficticia"@es ,
+                                            "shell company"@en .
+
+
+###  http://purl.org/ontology/onfraud#Empleado
+:Empleado rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/ns/org#memberOf> ;
+                            owl:someValuesFrom <http://www.w3.org/ns/org#Organization>
+                          ] .
+
+
+###  http://purl.org/ontology/onfraud#EmpresaInvestigacion
+:EmpresaInvestigacion rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/org#FormalOrganization> .
+
+
+###  http://purl.org/ontology/onfraud#EsquemaDeCompras
+:EsquemaDeCompras rdf:type owl:Class ;
+                  rdfs:subClassOf :ConflictoDeInteres ;
+                  owl:disjointWith :EsquemeDeVentas ;
+                  rdf:label "Esquema de compras"@es ,
+                            "Purchase schemes"@en ;
+                  rdfs:comment "La sobrefacturación a una organización por bienes o servicios por parte de un proveedor en la que un empleado o directivo de la organización tiene un interés no manifestado de tipo financiero o de propiedad"@es ,
+                               "Type of conflict of interest which involves the overbilling of a company for goods or services by a vendor in which an employee has an undisclosed ownership or financial interest."@en .
+
+
+###  http://purl.org/ontology/onfraud#EsquemaDeLicitación
+:EsquemaDeLicitación rdf:type owl:Class ;
+                     rdfs:subClassOf :Soborno ;
+                     owl:disjointWith :EsquemeDeComisión ;
+                     rdf:label "Bid rigging"@en ,
+                               "Licitación"@es ;
+                     rdfs:comment "Se produce cuando un empleado ayuda de forma fraudulenta a un proveedor para ganar un contrato a lo largo del proceso de licitación"@es ,
+                                  "Type of bribery scheme which occurs when an employee fraudulently assists a vendor in winning a contract through the competitive bidding process."@en .
+
+
+###  http://purl.org/ontology/onfraud#EsquemeDeComisión
+:EsquemeDeComisión rdf:type owl:Class ;
+                   rdfs:subClassOf :Soborno ;
+                   rdf:label "Comisión en facturas"@es ,
+                             "Invoice Kickbacks"@en ;
+                   rdfs:comment "Se produce cuando un proveedor realiza pagos no revelados a los empleados de la sociedadcon el fin de reclutar a los empleados en esquemas de sobrefacturación"@es ,
+                                "Type of bribery scheme which occurs when vendors make undisclosed payments to employees of purchasing companies in order to enlist the employees in overbilling schemes."@en .
+
+
+###  http://purl.org/ontology/onfraud#EsquemeDeVentas
+:EsquemeDeVentas rdf:type owl:Class ;
+                 rdfs:subClassOf :ConflictoDeInteres ;
+                 rdf:label "Esquema de ventas"@es ,
+                           "Sales scheme"@en ;
+                 rdfs:comment "La venta a una organización de bienes o servicios en menor cuantía o importe a un cliente en la que un empleado o directivo de la organización tiene un interés no manifestado de tipo financiero o de propiedad"@es ,
+                              "Type of conflict of interest which involves the underselling of company goods by an employee to a company in which the employee maintains a hidden interest."@en .
+
+
+###  http://purl.org/ontology/onfraud#Extorsión
+:Extorsión rdf:type owl:Class ;
+           rdfs:subClassOf :Corrupción ;
+           rdf:label "Economic extortion"@en ,
+                     "Extorsión económica"@es ;
+           rdfs:comment "Corruption scheme which occur when an employee demands payment from a vendor for decisions made in the vendor’s favor. Refusal to pay the extorter results in harm to the vendor."@en ,
+                        "Cuando un empleado reclama el pago de un vendedor por decisiones realizadas en favor del proveedor. Si un proveedor rechaza realizar el pago, el defraudador le causa algún tipo de daño"@es .
+
+
+###  http://purl.org/ontology/onfraud#Fraude
+:Fraude rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+        rdf:label "Fraud"@en ,
+                  "Fraude"@es ;
+        rdfs:comment "Acto intencional cometido por una persona u organización para obtener un beneficio actual o futuro que cause un perjuicio económico o contra la propiedad a un tercero mediante el engaño, la ocultación u otros actos desleales"@es .
+
+
+###  http://purl.org/ontology/onfraud#FraudeEnEstadosFinancieros
+:FraudeEnEstadosFinancieros rdf:type owl:Class ;
+                            rdfs:subClassOf :FraudeInterno ;
+                            rdf:label "Fraude en estados financieros"@es ,
+                                      "Fraudulent statements"@en ;
+                            rdfs:comment "A scheme in which an employee intentionally causes a misstatement or omission of material information in the organization’s financial reports."@en ,
+                                         "Cuando un empleado causa una alteración u omisión voluntaria y de la información financiera de la organización"@es .
+
+
+###  http://purl.org/ontology/onfraud#FraudeExterno
+:FraudeExterno rdf:type owl:Class ;
+               rdfs:subClassOf :Fraude ;
+               owl:disjointWith :FraudeInterno ;
+               rdf:label "External Fraud"@en ,
+                         "Fraude Externo"@es ;
+               rdfs:comment "Fraud commited by a third party not related to the organization."@en ,
+                            "Fraude producido por un tercero contra la organización, esto es, aquel que no es producido por un empleado de la compañía."@es .
+
+
+###  http://purl.org/ontology/onfraud#FraudeInterno
+:FraudeInterno rdf:type owl:Class ;
+               rdfs:subClassOf :Fraude ;
+               rdf:label "Fraude Interno"@es ,
+                         "Internal Fraud"@en ;
+               rdfs:comment "Fraud commited by an employee, administrator or exectuive against the organization he/she is working for"@en ,
+                            "Fraude cometido por un empleado, gerente o directivo de la organización para la que trabaja"@es .
+
+
+###  http://purl.org/ontology/onfraud#GratuidadIlegal
+:GratuidadIlegal rdf:type owl:Class ;
+                 rdfs:subClassOf :Corrupción ;
+                 rdf:label "Gratuidades ilegales"@es ,
+                           "Illegal gratuities"@en ;
+                 rdfs:comment "Dar o recibir algo de valor como contrapartida por una decisión de negocio"@es ,
+                              "This scheme involves giving or receiving something of value to reward a business decision."@en .
+
+
+###  http://purl.org/ontology/onfraud#HurtoFondosRegistrados
+:HurtoFondosRegistrados rdf:type owl:Class ;
+                        rdfs:subClassOf :RoboDeposito ;
+                        owl:disjointWith :Skimming ;
+                        rdf:label "Cash Larceny"@en ;
+                        rdfs:comment """Cash larceny may be defined as the intentional taking away of an
+employer‘s cash (the term cash includes both currency and checks) without the consent and against the will of the employer. That cash has already appeared on a victim organisation’s books. Most  larceny schemes involve the theft of incoming cash, currency on hand (in a cash register, cash box, etc.), or theft of cash from the victim organisation’s bank deposits."""@en ,
+                                     "Hurto de fondos de la organización que han sido registrados contablemente en libros u otros registros. Estos fondos pueden ser fondos de caja, cheques o depósito bancarios, entre otros."@es ,
+                                     "Hurto o robo de efectivo"@es .
+
+
+###  http://purl.org/ontology/onfraud#Investigación
+:Investigación rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+               rdf:label "Fraud Investigation"@en ,
+                         "Investigación de fraude"@en ;
+               rdfs:comment "Actividad destinada a destapar la naturaleza de un fraude,identificar responsables y el destino de los fondos,  establecer una cronología de los hechos y calcular el perjuicio económico"@es ,
+                            "Activity that is carried out by an investigation team to uncover a fraud, identify the fraudster and the destination of the funds, quantify the economic damage and establish a chronology of the events."@en .
+
+
+###  http://purl.org/ontology/onfraud#PerjuicioEconómico
+:PerjuicioEconómico rdf:type owl:Class ;
+                    rdf:label "Economic damage"@en ,
+                              "Perjuicio económico"@es .
+
+
+###  http://purl.org/ontology/onfraud#Redflag
+:Redflag rdf:type owl:Class ;
+         rdf:label "Indicador de riesgo de fraude"@es ,
+                   "Redflag"@en ;
+         rdfs:comment "A red flag is an indicator  of something that is unusual and may need to be investigated further."@en ,
+                      "Un redflag es un indicador de algo que necesita ser investigado con más detalle por ser inusual y está asociado a un esquema de fraude"@en .
+
+
+###  http://purl.org/ontology/onfraud#RoboActivoNoFinanciero
+:RoboActivoNoFinanciero rdf:type owl:Class ;
+                        rdfs:subClassOf :ApropiaciónDeActivosDeNaturalezaNoFinanciera ;
+                        owl:disjointWith :UsoIndebidoActivoNoFinanciero ;
+                        rdf:label "Larceny"@en ,
+                                  "Robo de Activos No Financieros"@es ;
+                        rdfs:comment "A scheme involving the theft of physical inventory items and the misstatement of inventory records on a company's financial statements"@en ,
+                                     "Implica el robo de inventario o de activos y su alteración en los registros contables de la organización"@es .
+
+
+###  http://purl.org/ontology/onfraud#RoboDeposito
+:RoboDeposito rdf:type owl:Class ;
+              rdfs:subClassOf :ApropiaciónDeActivosDeNaturalezaFinanciera ;
+              rdf:label "Robos en la recepción de fondos"@es ,
+                        "TheftOfCashReceipts"@en ;
+              rdfs:comment "Esquemas que implican el robo de fondos de la organización, bien estando éstos registrados contablemente o no"@es ,
+                           "This scheme implies the theft of cash from the organization, having these funds being recorded or not"@en .
+
+
+###  http://purl.org/ontology/onfraud#RoboEfectivo
+:RoboEfectivo rdf:type owl:Class ;
+              rdfs:subClassOf :ApropiaciónDeActivosDeNaturalezaFinanciera ;
+              rdf:label "Cash theft"@en ,
+                        "Robo de fondos de la caja o en metálico"@es .
+
+
+###  http://purl.org/ontology/onfraud#RoboEnCompraRecepción
+:RoboEnCompraRecepción rdf:type owl:Class ;
+                       rdfs:subClassOf :RoboActivoNoFinanciero ;
+                       rdf:label "Robo En Compra y Recepción"@es ;
+                       rdfs:comment "Este esquema ocurre cuando un empleado roba la mercancía de entrada marcando en el albarán de entrada como entrega parcial"@en ,
+                                    "Purchasing And Receiving"@en ,
+                                    "Type of larceny scheme in which an employee steals incoming merchandise by fraudulently marking incoming shipments as “short” to conceal the theft."@en .
+
+
+###  http://purl.org/ontology/onfraud#RoboPorSolicitudDeActivo
+:RoboPorSolicitudDeActivo rdf:type owl:Class ;
+                          rdfs:subClassOf :RoboActivoNoFinanciero ;
+                          rdf:label "Asset Request And Transfers"@en ,
+                                    "Robo por Solicitud de Activos"@es ;
+                          rdfs:comment "Implica el uso de documentos internos para que inventario o equipamientos se muevan de una localización a otra"@es ,
+                                       "Type of larceny scheme which involves the use of internal documents to cause inventory, supplies, or equipment to be moved from one location to another or allocated to a particular project."@en .
+
+
+###  http://purl.org/ontology/onfraud#RoboPorVentaYEntregaFalsa
+:RoboPorVentaYEntregaFalsa rdf:type owl:Class ;
+                           rdfs:subClassOf :RoboActivoNoFinanciero ;
+                           rdf:label "False Sales And Shipping"@en ,
+                                     "robo por venta y entrega falsa"@es ;
+                           rdfs:comment "Ocurre cuando un defraudador hace que una organización envíe mercancía como si hubiera sido comprada al defraudador o a un cómplice"@es ,
+                                        "Type of larceny scheme which occurs when a fraudster causes an organization to ship out merchandise as though it had been sold. The shipments are usually sent to the fraudster or to an accomplice."@en .
+
+
+###  http://purl.org/ontology/onfraud#RoboSinOcultación
+:RoboSinOcultación rdf:type owl:Class ;
+                   rdfs:subClassOf :RoboActivoNoFinanciero ;
+                   rdf:label "Robo sin ocultación"@es ,
+                             "Unconcealed Larceny"@en ;
+                   rdfs:comment "Ocurre cuando un empleado coge material o activos de la organización sin intentar alterar en libros su robo"@es ,
+                                "Type of larceny scheme which occur when an employee takes property from the company’s premises without attempting to conceal it in the books and records."@en .
+
+
+###  http://purl.org/ontology/onfraud#SOECorteTemporal
+:SOECorteTemporal rdf:type owl:Class ;
+                  rdfs:subClassOf :SobreestimaciónDeActivosEIngresos ;
+                  rdf:label "Corte temporal"@es ,
+                            "Overstatement - Timming differences"@en ;
+                  rdfs:comment "Registrar ingresos o gastos en periodos contables indebidos"@es ,
+                               "This scheme involves recording revenues or expenses in improper accounting periods."@en .
+
+
+###  http://purl.org/ontology/onfraud#SOEInformaciónRelevante
+:SOEInformaciónRelevante rdf:type owl:Class ;
+                         rdfs:subClassOf :SobreestimaciónDeActivosEIngresos ;
+                         rdf:label "Improper diclosures"@en ,
+                                   "Indebida comunicación de información relevante"@es ;
+                         rdfs:comment "A fraudulent financial report scheme which involves the improper disclosure of material information, such as contingent liabilities, significant events, management fraud, related-party transactions, or accounting changes."@en ,
+                                      "Consiste en la revelación parcial o en la ocultación de información relevante como transacciones entre grupos, eventos relevantes, fraude en la gestión, cambios en la contabilización, entre otros"@es .
+
+
+###  http://purl.org/ontology/onfraud#SOEIngresosFicticios
+:SOEIngresosFicticios rdf:type owl:Class ;
+                      rdfs:subClassOf :SobreestimaciónDeActivosEIngresos ;
+                      rdf:label "Fictitious revenues"@en ,
+                                "Registro de ingresos ficticios"@es ;
+                      rdfs:comment "A fraudulent financial report scheme which involves recording fictitious revenue from the sale of goods or services."@en ,
+                                   "Registrar ingresos ficticios por ventas de bienes o servicios"@es .
+
+
+###  http://purl.org/ontology/onfraud#SOEManipulaciónValor
+:SOEManipulaciónValor rdf:type owl:Class ;
+                      rdfs:subClassOf :SobreestimaciónDeActivosEIngresos ;
+                      rdf:label "Improper assets valuations"@en ,
+                                "La valoración indebida de inventario, clientes o activos de la organización"@es ,
+                                "Valoración indebida de activos"@es ;
+                      rdfs:comment "A fraudulent financial report scheme which involves the improper valuation of inventory, accounts receivable, fixed assets, intangibles, or other assets."@en .
+
+
+###  http://purl.org/ontology/onfraud#SOEOcultaciónPasivosGastos
+:SOEOcultaciónPasivosGastos rdf:type owl:Class ;
+                            rdfs:subClassOf :SobreestimaciónDeActivosEIngresos ;
+                            rdf:label "Concealed liabilities and expenses"@en ,
+                                      "Ocultación o manipulación de deudas o gastos"@es ;
+                            rdfs:comment "A fraudulent financial report scheme which involves concealing or understating liabilities and expenses, capitalizing expenses, or expensing capital expenses."@en ,
+                                         "Este esquema consiste en no registrar o minusvalorar los gastos incurridos o deudas con terceros"@es .
+
+
+###  http://purl.org/ontology/onfraud#SUBCorteTemporal
+:SUBCorteTemporal rdf:type owl:Class ;
+                  rdfs:subClassOf :SubestimaciónDeActivosEIngresos ;
+                  rdf:label "Corte temporal"@es ,
+                            "Overstatement - Timming differences"@en ;
+                  rdfs:comment "Registrar ingresos o gastos en periodos contables indebidos"@es ,
+                               "This scheme involves recording revenues or expenses in improper accounting periods."@en .
+
+
+###  http://purl.org/ontology/onfraud#SUBIngresosFicticios
+:SUBIngresosFicticios rdf:type owl:Class ;
+                      rdfs:subClassOf :SubestimaciónDeActivosEIngresos ;
+                      rdf:label "Fictitious revenues"@en ,
+                                "Registro de ingresos ficticios"@es ;
+                      rdfs:comment "A fraudulent financial report scheme which involves recording fictitious revenue from the sale of goods or services."@en ,
+                                   "Registrar ingresos ficticios por ventas de bienes o servicios"@es .
+
+
+###  http://purl.org/ontology/onfraud#SUBManipulaciónValor
+:SUBManipulaciónValor rdf:type owl:Class ;
+                      rdfs:subClassOf :SubestimaciónDeActivosEIngresos ;
+                      rdf:label "Improper assets valuations"@en ,
+                                "La valoración indebida de inventario, clientes o activos de la organización"@es ,
+                                "Valoración indebida de activos"@es ;
+                      rdfs:comment "A fraudulent financial report scheme which involves the improper valuation of inventory, accounts receivable, fixed assets, intangibles, or other assets."@en .
+
+
+###  http://purl.org/ontology/onfraud#SUBOcultaciónPasivosGastos
+:SUBOcultaciónPasivosGastos rdf:type owl:Class ;
+                            rdfs:subClassOf :SubestimaciónDeActivosEIngresos ;
+                            rdf:label "Concealed liabilities and expenses"@en ,
+                                      "Ocultación o manipulación de deudas o gastos"@es ;
+                            rdfs:comment "A fraudulent financial report scheme which involves concealing or understating liabilities and expenses, capitalizing expenses, or expensing capital expenses."@en ,
+                                         "Este esquema consiste en no registrar o minusvalorar los gastos incurridos o deudas con terceros"@es .
+
+
+###  http://purl.org/ontology/onfraud#SikimmingDevolucion
+:SikimmingDevolucion rdf:type owl:Class ;
+                     rdfs:subClassOf :Skimming ;
+                     rdf:label "Refunds skimming"@en ,
+                               "Skimming de devolución"@es ;
+                     rdfs:comment "Consiste en quedarse con todo o parte del importe correspondiente a una devolución sin que quede registrado."@es ,
+                                  "Occurs when the fraudster steals the funds corresponding to a refund without being this refund registered."@en .
+
+
+###  http://purl.org/ontology/onfraud#Skimming
+:Skimming rdf:type owl:Class ;
+          rdfs:subClassOf :RoboDeposito ;
+          rdf:label "Skimming"@en ;
+          rdfs:comment "En un esquema en el que se roban los fondos de la organización antes de que se registre por ésta en sus libros o registros contables."@es ,
+                       "The fraud occurs by the theft of incoming customer payments or of non-revenue cash receipts before the funds are deposited and recorded in the accounting records."@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingRecibo
+:SkimmingRecibo rdf:type owl:Class ;
+                rdfs:subClassOf :Skimming ;
+                rdf:label "Receivables"@en ,
+                          "Skimming en recibos"@es ;
+                rdfs:comment "Este esquemas están relacionados con el registro de mercancía por cobrar que va a ser dada de baja"@es ,
+                             "These schemes are related to the registration of merchandise or receivable that is going to be deregistered"@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingReciboCondonación
+:SkimmingReciboCondonación rdf:type owl:Class ;
+                           rdfs:subClassOf :SkimmingRecibo ;
+                           owl:disjointWith :SkimmingReciboRegistro ;
+                           rdf:label "Condonación"@es ,
+                                     "Write-Off"@en ;
+                           rdfs:comment "Consiste en un empleado da de baja un inventario robado como si hubiera sido desechado"@es ,
+                                        "Type of skimming scheme which involves an employee writing off the stolen inventory item as scrap or similar in the inventory records so that they coincide with the actual physical inventory levels."@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingReciboRegistro
+:SkimmingReciboRegistro rdf:type owl:Class ;
+                        rdfs:subClassOf :SkimmingRecibo ;
+                        rdf:label "Lapping scheme"@en ,
+                                  "registro de recibo"@es ;
+                        rdfs:comment "Ocurre cuando se alteran las cuentas por cobrar del registro contable al robar fondos destinados al pago de una cuenta por cobrar."@es ,
+                                     "Type of skimming scheme which involves an accounting method that involves altering the accounts receivable section of the balance sheet when cash that is intended for the payment of a receivable is stolen."@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingVenta
+:SkimmingVenta rdf:type owl:Class ;
+               rdfs:subClassOf :Skimming ;
+               rdf:label "Skimming Sales Scheme"@en ,
+                         "Skimming en Ventas"@es ;
+               rdfs:comment "Este esquema se produce cuando no se registra la venta o se registra por un menor valor"@es ,
+                            "This scheme occurs when the sale is not recorded or is understated"@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingVentasMenorValor
+:SkimmingVentasMenorValor rdf:type owl:Class ;
+                          rdfs:subClassOf :SkimmingVenta ;
+                          owl:disjointWith :SkimmingVentasSinRegistro ;
+                          rdf:label "Se produce cuando el defraudador registra un menor valor de la venta de un producto o servicio"@es ,
+                                    "Skimming por Ventas por Menor Valor"@es ,
+                                    "Understated Skimming Scheme"@en ;
+                          rdfs:comment "Type of skimming scheme which involves an employee booking a lower sale amount of a product or service than the perpetrator actually collected."@en .
+
+
+###  http://purl.org/ontology/onfraud#SkimmingVentasSinRegistro
+:SkimmingVentasSinRegistro rdf:type owl:Class ;
+                           rdfs:subClassOf :SkimmingVenta ;
+                           rdf:label "Skimming Ventas Sin Registro"@es ,
+                                     "Unrecorded Skimming Scheme"@en ;
+                           rdfs:comment "Se produce cuando no se registra la venta y el defraudador se queda con el importe del bien o servicio."@es ,
+                                        "Type of skimming scheme which involves an employee making no record of the sale and pocketing the money received from that good or service."@en .
+
+
+###  http://purl.org/ontology/onfraud#Soborno
+:Soborno rdf:type owl:Class ;
+         rdfs:subClassOf :Corrupción ;
+         rdf:label "Bribery"@en ,
+                   "Soborno"@es ;
+         rdfs:comment "Corruption scheme which involves the offering, giving, receiving, or soliciting of a thing of value to influence a business decision."@en ,
+                      "El soborno implica ofrecer, dar, recibir o solicitar una cosa de valor a un tercero para influir en una decisión de negocio"@es .
+
+
+###  http://purl.org/ontology/onfraud#SobreestimaciónDeActivosEIngresos
+:SobreestimaciónDeActivosEIngresos rdf:type owl:Class ;
+                                   rdfs:subClassOf :FraudeEnEstadosFinancieros ;
+                                   owl:disjointWith :SubestimaciónDeActivosEIngresos ;
+                                   rdf:label "Asset or revenue overstatements"@en ,
+                                             "Sobreestimación de activos e ingresos"@es .
+
+
+###  http://purl.org/ontology/onfraud#SubestimaciónDeActivosEIngresos
+:SubestimaciónDeActivosEIngresos rdf:type owl:Class ;
+                                 rdfs:subClassOf :FraudeEnEstadosFinancieros .
+
+
+###  http://purl.org/ontology/onfraud#UsoIndebidoActivoNoFinanciero
+:UsoIndebidoActivoNoFinanciero rdf:type owl:Class ;
+                               rdfs:subClassOf :ApropiaciónDeActivosDeNaturalezaNoFinanciera ;
+                               rdf:label "Misuse"@en ,
+                                         "uso indebido de activos, material o equipos"@es ;
+                               rdfs:comment "A scheme that  occurs when an employee makes an unauthorized use of his organization’s property without actually stealing the property."@en ,
+                                            "Se produce cuando realiza un uso indebido de un bien  de la organización sin robarlo"@es .
+
+
+###  http://purl.org/ontology/onfraud#Victima
+:Victima rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/ns/org#FormalOrganization> .
+
+
+###  http://www.w3.org/2000/10/swap/pim/contact#Person
+<http://www.w3.org/2000/10/swap/pim/contact#Person> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#OrganizationalUnit
+<http://www.w3.org/ns/org#OrganizationalUnit> rdf:type owl:Class .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dcterms: <http://purl.org/dc/terms/publisher> <http://purl.org/dc/aboutdcmi#DCMI> ;
+         <http://purl.org/dc/terms/title> "Dublin Core Metadata Element Set, Version 1.1"@en ;
+         <http://purl.org/dc/terms/modified> "2012-06-14"^^xsd:date .
+
+
+dcterms:contributor rdfs:label "Contributor"@en ;
+                    <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                    <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#contributor-006> ;
+                    rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+                    <http://purl.org/dc/terms/description> "Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity."@en ;
+                    <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                    rdfs:isDefinedBy dcterms: .
+
+
+dcterms:coverage <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#coverage-006> ;
+                 rdfs:isDefinedBy dcterms: ;
+                 <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                 <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                 rdfs:comment "The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant."@en ;
+                 <http://purl.org/dc/terms/description> "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges."@en ;
+                 <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                 rdfs:label "Coverage"@en .
+
+
+dcterms:creator <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                rdfs:label "Creator"@en ;
+                rdfs:comment "An entity primarily responsible for making the resource."@en ;
+                rdfs:isDefinedBy dcterms: ;
+                <http://purl.org/dc/terms/description> "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity."@en ;
+                <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#creator-006> ;
+                <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date .
+
+
+dcterms:date <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+             <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+             <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+             rdfs:isDefinedBy dcterms: ;
+             <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#date-006> ;
+             rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+             <http://purl.org/dc/terms/description> "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+             rdfs:label "Date"@en .
+
+
+dcterms:description <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                    rdfs:isDefinedBy dcterms: ;
+                    <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                    <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                    rdfs:comment "An account of the resource."@en ;
+                    <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                    rdfs:label "Description"@en ;
+                    <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#description-006> .
+
+
+dcterms:format <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+               <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+               rdfs:label "Format"@en ;
+               rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+               <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#format-007> ;
+               rdfs:isDefinedBy dcterms: ;
+               <http://purl.org/dc/terms/description> "Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME]."@en .
+
+
+dcterms:identifier <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#identifier-006> ;
+                   rdfs:isDefinedBy dcterms: ;
+                   <http://purl.org/dc/terms/description> "Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. "@en ;
+                   rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
+                   <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                   <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                   rdfs:label "Identifier"@en ;
+                   <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en .
+
+
+dcterms:language <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                 <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                 <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                 rdfs:label "Language"@en ;
+                 <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#language-007> ;
+                 <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646]."@en ;
+                 rdfs:isDefinedBy dcterms: ;
+                 rdfs:comment "A language of the resource."@en ;
+                 rdfs:seeAlso <http://www.ietf.org/rfc/rfc4646.txt> .
+
+
+dcterms:publisher <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#publisher-006> ;
+                  <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                  <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                  <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                  rdfs:label "Publisher"@en ;
+                  rdfs:isDefinedBy dcterms: ;
+                  <http://purl.org/dc/terms/description> "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity."@en ;
+                  rdfs:comment "An entity responsible for making the resource available."@en .
+
+
+dcterms:relation <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#relation-006> ;
+                 <http://purl.org/dc/terms/description> "Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. "@en ;
+                 rdfs:label "Relation"@en ;
+                 <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+                 <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                 <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                 rdfs:comment "A related resource."@en ;
+                 rdfs:isDefinedBy dcterms: .
+
+
+dcterms:rights <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#rights-006> ;
+               rdfs:isDefinedBy dcterms: ;
+               <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+               <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en ;
+               rdfs:label "Rights"@en ;
+               <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+               rdfs:comment "Information about rights held in and over the resource."@en .
+
+
+dcterms:source <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#source-006> ;
+               <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+               rdfs:isDefinedBy dcterms: ;
+               rdfs:comment "A related resource from which the described resource is derived."@en ;
+               <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+               <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+               <http://purl.org/dc/terms/description> "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."@en ;
+               rdfs:label "Source"@en .
+
+
+dcterms:subject <http://purl.org/dc/terms/description> "Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary."@en ;
+                <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+                <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+                rdfs:label "Subject"@en ;
+                rdfs:comment "The topic of the resource."@en ;
+                rdfs:isDefinedBy dcterms: ;
+                <http://purl.org/dc/terms/modified> "2012-06-14"^^xsd:date ;
+                <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#subject-007> .
+
+
+dcterms:title rdfs:comment "A name given to the resource."@en ;
+              <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date ;
+              <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+              rdfs:label "Title"@en ;
+              <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+              <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#title-006> ;
+              rdfs:isDefinedBy dcterms: .
+
+
+dcterms:type rdfs:comment "The nature or genre of the resource."@en ;
+             <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#type-006> ;
+             rdfs:label "Type"@en ;
+             rdfs:isDefinedBy dcterms: ;
+             <http://purl.org/dc/terms/description> "Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element."@en ;
+             <http://purl.org/dc/terms/issued> "1999-07-02"^^xsd:date ;
+             <http://www.w3.org/2004/02/skos/core#note> "A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document \"DCMI Metadata Terms\" (http://dublincore.org/documents/dcmi-terms/) for an explanation."@en ;
+             <http://purl.org/dc/terms/modified> "2008-01-14"^^xsd:date .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ApropiacionDeActivos
+                :Corrupción
+                :FraudeEnEstadosFinancieros
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConflictoDeInteres
+                :Extorsión
+                :GratuidadIlegal
+                :Soborno
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsoIndebido
+                :RoboDeposito
+                :RoboEfectivo
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsosIndebidosAlteracionCheques
+                :DesembolsosIndebidosFacturación
+                :DesembolsosIndebidosNómina
+                :DesembolsosIndebidosRegistroDesembolsos
+                :DesembolsosIndebidosReintegroGastos
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsosIndebidosAlteracionEndosoEnCheque
+                :DesembolsosIndebidosAlteraciónReceptorFondos
+                :DesembolsosIndebidosEmisorAutorizado
+                :DesembolsosIndebidosFalsificacionCheque
+                :DesembolsosIndebidosFalsificacionEmisorEnCheque
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsosIndebidosComprasPersonales
+                :DesembolsosIndebidosConnivenciaProveedor
+                :DesembolsosIndebidosShellCompany
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsosIndebidosEmpleadosFantasma
+                :DesembolsosIndebidosEsquemasDeComisión
+                :DesembolsosIndebidosFalsificacionSalarios
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DesembolsosIndebidosGastosFicticios
+                :DesembolsosIndebidosGastosMultiplesReintegros
+                :DesembolsosIndebidosGastosPersonales
+                :DesembolsosIndebidosGastosPorEncimaCoste
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :RoboEnCompraRecepción
+                :RoboPorSolicitudDeActivo
+                :RoboPorVentaYEntregaFalsa
+                :RoboSinOcultación
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :SOECorteTemporal
+                :SOEInformaciónRelevante
+                :SOEIngresosFicticios
+                :SOEManipulaciónValor
+                :SOEOcultaciónPasivosGastos
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :SikimmingDevolucion
+                :SkimmingRecibo
+                :SkimmingVenta
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "defraudador"^^xsd:string ;
+   rdfs:label "regla1"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Empleado ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :worksIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :engaña ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Organization> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :y
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DefraudadorExterno ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
