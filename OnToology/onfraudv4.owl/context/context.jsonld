@@ -1,0 +1,388 @@
+{
+  "@context" : {
+    "SkimmingVentasMenorValor" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingVentasMenorValor"
+    },
+    "Skimming" : {
+      "@id" : "http://purl.org/ontology/onfraud#Skimming"
+    },
+    "Soborno" : {
+      "@id" : "http://purl.org/ontology/onfraud#Soborno"
+    },
+    "SUBManipulaciónValor" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBManipulaciónValor"
+    },
+    "EmpresaInvestigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#EmpresaInvestigacion"
+    },
+    "hasCurrencyValue" : {
+      "@id" : "gr:hasCurrencyValue"
+    },
+    "contractingAuthority" : {
+      "@id" : "http://purl.org/procurement/public-contracts#contractingAuthority"
+    },
+    "v1valueAddedTaxIncluded" : {
+      "@id" : "http://purl.org/goodrelations/v1valueAddedTaxIncluded"
+    },
+    "SOECorteTemporal" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOECorteTemporal"
+    },
+    "RoboSinOcultación" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboSinOcultación"
+    },
+    "SkimmingReciboRegistro" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingReciboRegistro"
+    },
+    "SkimmingVenta" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingVenta"
+    },
+    "UsoIndebidoActivoNoFinanciero" : {
+      "@id" : "http://purl.org/ontology/onfraud#UsoIndebidoActivoNoFinanciero"
+    },
+    "estaAsociadoCon" : {
+      "@id" : "http://purl.org/ontology/onfraud#estaAsociadoCon",
+      "@type" : "@id"
+    },
+    "DefraudadorInterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#DefraudadorInterno"
+    },
+    "DesembolsosIndebidosAnulacionesFalsas" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosAnulacionesFalsas"
+    },
+    "Organization" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    },
+    "FraudeInterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeInterno"
+    },
+    "DesembolsosIndebidosEmisorAutorizado" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosEmisorAutorizado"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DesembolsosIndebidosFalsificacionCheque" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionCheque"
+    },
+    "FraudeEnEstadosFinancieros" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeEnEstadosFinancieros"
+    },
+    "tieneRedFlag" : {
+      "@id" : "http://purl.org/ontology/onfraud#tieneRedFlag",
+      "@type" : "@id"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "actualPrice" : {
+      "@id" : "http://purl.org/procurement/public-contracts#actualPrice"
+    },
+    "ApropiaciónDeActivosDeNaturalezaFinanciera" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaFinanciera"
+    },
+    "Redflag" : {
+      "@id" : "http://purl.org/ontology/onfraud#Redflag"
+    },
+    "DefraudadorExterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#DefraudadorExterno"
+    },
+    "RoboPorSolicitudDeActivo" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboPorSolicitudDeActivo"
+    },
+    "SkimmingReciboCondonación" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingReciboCondonación"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "Empleado" : {
+      "@id" : "http://purl.org/ontology/onfraud#Empleado"
+    },
+    "RoboEfectivo" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboEfectivo"
+    },
+    "tieneEquipoInvestigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#tieneEquipoInvestigacion",
+      "@type" : "@id"
+    },
+    "EsquemeDeVentas" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemeDeVentas"
+    },
+    "HurtoFondosRegistrados" : {
+      "@id" : "http://purl.org/ontology/onfraud#HurtoFondosRegistrados"
+    },
+    "Victima" : {
+      "@id" : "http://purl.org/ontology/onfraud#Victima"
+    },
+    "hasCurrency" : {
+      "@id" : "http://purl.org/goodrelations/v1#hasCurrency"
+    },
+    "EsquemaDeLicitación" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeLicitación"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "DesembolsosIndebidosGastosMultiplesReintegros" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosMultiplesReintegros"
+    },
+    "DesembolsoIndebido" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsoIndebido"
+    },
+    "SUBOcultaciónPasivosGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBOcultaciónPasivosGastos"
+    },
+    "RoboDeposito" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboDeposito"
+    },
+    "DesembolsosIndebidosGastosPorEncimaCoste" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosPorEncimaCoste"
+    },
+    "causaPerjuicioEconomico" : {
+      "@id" : "http://purl.org/ontology/onfraud#causaPerjuicioEconomico",
+      "@type" : "@id"
+    },
+    "GratuidadIlegal" : {
+      "@id" : "http://purl.org/ontology/onfraud#GratuidadIlegal"
+    },
+    "SOEIngresosFicticios" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEIngresosFicticios"
+    },
+    "Activity" : {
+      "@id" : "http://www.w3.org/ns/prov#Activity"
+    },
+    "afectaA" : {
+      "@id" : "http://purl.org/ontology/onfraud#afectaA",
+      "@type" : "@id"
+    },
+    "SUBCorteTemporal" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBCorteTemporal"
+    },
+    "realizaInvestigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#realizaInvestigacion",
+      "@type" : "@id"
+    },
+    "FormalOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#FormalOrganization"
+    },
+    "Person" : {
+      "@id" : "http://www.w3.org/2000/10/swap/pim/contact#Person"
+    },
+    "SobreestimaciónDeActivosEIngresos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SobreestimaciónDeActivosEIngresos"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "RoboEnCompraRecepción" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboEnCompraRecepción"
+    },
+    "DesembolsosIndebidosFacturación" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosFacturación"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "Fraude" : {
+      "@id" : "http://purl.org/ontology/onfraud#Fraude"
+    },
+    "EsquemaDeCompras" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeCompras"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "DesembolsosIndebidosGastosFicticios" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosFicticios"
+    },
+    "DesembolsosIndebidosRegistroDesembolsos" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosRegistroDesembolsos"
+    },
+    "DesembolsosIndebidosAlteracionEndosoEnCheque" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteracionEndosoEnCheque"
+    },
+    "descripcion" : {
+      "@id" : "http://purl.org/ontology/onfraud#descripcion"
+    },
+    "RoboActivoNoFinanciero" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboActivoNoFinanciero"
+    },
+    "DesembolsosIndebidosAlteracionCheques" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteracionCheques"
+    },
+    "Corrupción" : {
+      "@id" : "http://purl.org/ontology/onfraud#Corrupción"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "noticeDate" : {
+      "@id" : "http://purl.org/purchase2pay/individuals/noticeDate"
+    },
+    "Investigación" : {
+      "@id" : "http://purl.org/ontology/onfraud#Investigación"
+    },
+    "SikimmingDevolucion" : {
+      "@id" : "http://purl.org/ontology/onfraud#SikimmingDevolucion"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "idFraude" : {
+      "@id" : "http://purl.org/ontology/onfraud#idFraude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "engaña" : {
+      "@id" : "http://purl.org/ontology/onfraud#engaña",
+      "@type" : "@id"
+    },
+    "Defraudador" : {
+      "@id" : "http://purl.org/ontology/onfraud#Defraudador"
+    },
+    "SOEManipulaciónValor" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEManipulaciónValor"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "perjuicio" : {
+      "@id" : "http://purl.org/ontology/onfraud#perjuicio",
+      "@type" : "http://www.w3.org/2002/07/owl#real"
+    },
+    "ApropiacionDeActivos" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiacionDeActivos"
+    },
+    "DesembolsosIndebidosEsquemasDeComisión" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosEsquemasDeComisión"
+    },
+    "descripcionRedFlag" : {
+      "@id" : "http://purl.org/ontology/onfraud#descripcionRedFlag"
+    },
+    "DesembolsosIndebidosFalsificacionSalarios" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionSalarios"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "EsquemeDeComisión" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemeDeComisión"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "RoboPorVentaYEntregaFalsa" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboPorVentaYEntregaFalsa"
+    },
+    "Extorsión" : {
+      "@id" : "http://purl.org/ontology/onfraud#Extorsión"
+    },
+    "esInvestigado" : {
+      "@id" : "http://purl.org/ontology/onfraud#esInvestigado",
+      "@type" : "@id"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.w3.org/ns/org#hasUnit"
+    },
+    "SOEOcultaciónPasivosGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEOcultaciónPasivosGastos"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "supplier" : {
+      "@id" : "http://purl.org/procurement/public-contracts#supplier"
+    },
+    "DesembolsosIndebidosShellCompany" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosShellCompany"
+    },
+    "DesembolsosIndebidosFalsificacionEmisorEnCheque" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosFalsificacionEmisorEnCheque"
+    },
+    "notice" : {
+      "@id" : "http://purl.org/purchase2pay/individuals/notice"
+    },
+    "worksIn" : {
+      "@id" : "http://purl.org/ontology/onfraud#worksIn",
+      "@type" : "@id"
+    },
+    "DesembolsosIndebidosNómina" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosNómina"
+    },
+    "DesembolsosIndebidosAlteraciónReceptorFondos" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosAlteraciónReceptorFondos"
+    },
+    "SUBIngresosFicticios" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBIngresosFicticios"
+    },
+    "DesembolsosIndebidosDevoluciónFalsos" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosDevoluciónFalsos"
+    },
+    "memberOf" : {
+      "@id" : "http://www.w3.org/ns/org#memberOf",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "SubestimaciónDeActivosEIngresos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SubestimaciónDeActivosEIngresos"
+    },
+    "FraudeExterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeExterno"
+    },
+    "DesembolsosIndebidosConnivenciaProveedor" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosConnivenciaProveedor"
+    },
+    "DesembolsosIndebidosGastosPersonales" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosGastosPersonales"
+    },
+    "ApropiaciónDeActivosDeNaturalezaNoFinanciera" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaNoFinanciera"
+    },
+    "DesembolsosIndebidosEmpleadosFantasma" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosEmpleadosFantasma"
+    },
+    "DesembolsosIndebidosComprasPersonales" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosComprasPersonales"
+    },
+    "ConflictoDeInteres" : {
+      "@id" : "http://purl.org/ontology/onfraud#ConflictoDeInteres"
+    },
+    "OrganizationalUnit" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    "PerjuicioEconómico" : {
+      "@id" : "http://purl.org/ontology/onfraud#PerjuicioEconómico"
+    },
+    "DesembolsosIndebidosReintegroGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#DesembolsosIndebidosReintegroGastos"
+    },
+    "SkimmingVentasSinRegistro" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingVentasSinRegistro"
+    },
+    "SkimmingRecibo" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingRecibo"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "contrataInvestigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#contrataInvestigacion",
+      "@type" : "@id"
+    },
+    "SOEInformaciónRelevante" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEInformaciónRelevante"
+    }
+  }
+}
