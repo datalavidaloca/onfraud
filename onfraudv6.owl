@@ -503,8 +503,8 @@ owl:topDataProperty rdfs:domain :Redflag ;
                             "Type of expense reimbursement scheme which occurs when an employee requests reimbursement for a personal expense, claiming the expense to be business related."@en .
 
 
-###  http://purl.org/ontology/onfraud#GastoValorSobreestimado
-:GastoValorSobreestimado rdf:type owl:Class ;
+###  http://purl.org/ontology/onfraud#GastoValorSobrevalorado
+:GastoValorSobrevalorado rdf:type owl:Class ;
                          rdfs:subClassOf :ReintegroGastos ;
                          rdf:label "Gastos por encima de coste"@es ,
                                    "OverstatedExpenses"@en ;
@@ -678,13 +678,13 @@ employer‘s cash (the term cash includes both currency and checks) without the 
                         "Robo de fondos de la caja o en metálico"@es .
 
 
-###  http://purl.org/ontology/onfraud#RoboEnCompraRecepción
-:RoboEnCompraRecepción rdf:type owl:Class ;
-                       rdfs:subClassOf :RoboActivoNoFinanciero ;
-                       rdf:label "Robo En Compra y Recepción"@es ;
-                       rdfs:comment "Este esquema ocurre cuando un empleado roba la mercancía de entrada marcando en el albarán de entrada como entrega parcial"@en ,
-                                    "Purchasing And Receiving"@en ,
-                                    "Type of larceny scheme in which an employee steals incoming merchandise by fraudulently marking incoming shipments as “short” to conceal the theft."@en .
+###  http://purl.org/ontology/onfraud#RoboEnCompraYRecepción
+:RoboEnCompraYRecepción rdf:type owl:Class ;
+                        rdfs:subClassOf :RoboActivoNoFinanciero ;
+                        rdf:label "Robo En Compra y Recepción"@es ;
+                        rdfs:comment "Este esquema ocurre cuando un empleado roba la mercancía de entrada marcando en el albarán de entrada como entrega parcial"@en ,
+                                     "Purchasing And Receiving"@en ,
+                                     "Type of larceny scheme in which an employee steals incoming merchandise by fraudulently marking incoming shipments as “short” to conceal the theft."@en .
 
 
 ###  http://purl.org/ontology/onfraud#RoboPorSolicitudDeActivo
@@ -1143,7 +1143,7 @@ dcterms:type rdfs:comment "The nature or genre of the resource."@en ;
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :GastoPersonal
-                :GastoValorSobreestimado
+                :GastoValorSobrevalorado
                 :GastosFicticio
                 :MultiplesReintegros
               )
@@ -1159,7 +1159,7 @@ dcterms:type rdfs:comment "The nature or genre of the resource."@en ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :RoboEnCompraRecepción
+  owl:members ( :RoboEnCompraYRecepción
                 :RoboPorSolicitudDeActivo
                 :RoboPorVentaYEntregaFalsa
                 :RoboSinOcultación
@@ -1184,53 +1184,5 @@ dcterms:type rdfs:comment "The nature or genre of the resource."@en ;
               )
 ] .
 
-
-#################################################################
-#    Rules
-#################################################################
-
-:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "defraudador"^^xsd:string ;
-   rdfs:label "regla1"^^xsd:string ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Empleado ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :worksIn ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> :y
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :engaña ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> :y
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://xmlns.com/foaf/0.1/Organization> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :y
-                                                                                      ] ;
-                                                                            rdf:rest rdf:nil
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DefraudadorExterno ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
