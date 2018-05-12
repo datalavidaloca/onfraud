@@ -233,7 +233,7 @@
     <!-- http://purl.org/ontology/onfraud#calculaPerjuicioEconomico -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ontology/onfraud#calculaPerjuicioEconomico">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/onfraud#realizaAuditoriaForense"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/onfraud#realizaProcedimientoForense"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/onfraud#EquipoForensic"/>
         <rdfs:range rdf:resource="http://purl.org/ontology/onfraud#PerjuicioEconómico"/>
     </owl:ObjectProperty>
@@ -288,22 +288,22 @@
     
 
 
-    <!-- http://purl.org/ontology/onfraud#realizaAuditoriaForense -->
+    <!-- http://purl.org/ontology/onfraud#realizaInvestigacion -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ontology/onfraud#realizaAuditoriaForense">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/onfraud#realizaInvestigacion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/onfraud#realizaProcedimientoForense"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/onfraud#EquipoForensic"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/onfraud#ProcedimientoForense"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/onfraud#Investigacion"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/ontology/onfraud#realizaInvestigacion -->
+    <!-- http://purl.org/ontology/onfraud#realizaProcedimientoForense -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ontology/onfraud#realizaInvestigacion">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/onfraud#realizaAuditoriaForense"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/onfraud#realizaProcedimientoForense">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ontology/onfraud#EquipoForensic"/>
-        <rdfs:range rdf:resource="http://purl.org/ontology/onfraud#Investigacion"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/onfraud#ProcedimientoForense"/>
     </owl:ObjectProperty>
     
 
