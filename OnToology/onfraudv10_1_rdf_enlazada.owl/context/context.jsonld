@@ -1,0 +1,449 @@
+{
+  "@context" : {
+    "" : {
+      "@id" : "http://dbpedia.org/resource/Skimming_(fraud)"
+    },
+    "Skimming" : {
+      "@id" : "http://purl.org/ontology/onfraud#Skimming"
+    },
+    "Soborno" : {
+      "@id" : "http://purl.org/ontology/onfraud#Soborno"
+    },
+    "cometeFraudeInterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#cometeFraudeInterno",
+      "@type" : "@id"
+    },
+    "SUBManipulaciónValor" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBManipulaciónValor"
+    },
+    "CompraPersonal" : {
+      "@id" : "http://purl.org/ontology/onfraud#CompraPersonal"
+    },
+    "hasCurrencyValue" : {
+      "@id" : "gr:hasCurrencyValue"
+    },
+    "AlteraciónCheque" : {
+      "@id" : "http://purl.org/ontology/onfraud#AlteraciónCheque"
+    },
+    "contractingAuthority" : {
+      "@id" : "http://purl.org/procurement/public-contracts#contractingAuthority"
+    },
+    "Fraud" : {
+      "@id" : "http://dbpedia.org/resource/Fraud"
+    },
+    "v1valueAddedTaxIncluded" : {
+      "@id" : "http://purl.org/goodrelations/v1valueAddedTaxIncluded"
+    },
+    "SOECorteTemporal" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOECorteTemporal"
+    },
+    "RoboSinOcultación" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboSinOcultación"
+    },
+    "Investigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#Investigacion"
+    },
+    "SkimmingReciboRegistro" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingReciboRegistro"
+    },
+    "PagosFraudulentos" : {
+      "@id" : "http://purl.org/ontology/onfraud#PagosFraudulentos"
+    },
+    "ConnivenciaProveedor" : {
+      "@id" : "http://purl.org/ontology/onfraud#ConnivenciaProveedor"
+    },
+    "EsquemaEmisorAutorizado" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaEmisorAutorizado"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "SkimmingVenta" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingVenta"
+    },
+    "UsoIndebidoActivoNoFinanciero" : {
+      "@id" : "http://purl.org/ontology/onfraud#UsoIndebidoActivoNoFinanciero"
+    },
+    "estaAsociadoCon" : {
+      "@id" : "http://purl.org/ontology/onfraud#estaAsociadoCon",
+      "@type" : "@id"
+    },
+    "Extortion" : {
+      "@id" : "http://dbpedia.org/resource/Extortion"
+    },
+    "DefraudadorInterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#DefraudadorInterno"
+    },
+    "Organization" : {
+      "@id" : "http://www.w3.org/ns/org#Organization"
+    },
+    "FraudeInterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeInterno"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FraudeEnEstadosFinancieros" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeEnEstadosFinancieros"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "actualPrice" : {
+      "@id" : "http://purl.org/procurement/public-contracts#actualPrice"
+    },
+    "ApropiaciónDeActivosDeNaturalezaFinanciera" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaFinanciera"
+    },
+    "Redflag" : {
+      "@id" : "http://purl.org/ontology/onfraud#Redflag"
+    },
+    "DefraudadorExterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#DefraudadorExterno"
+    },
+    "RoboPorSolicitudDeActivo" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboPorSolicitudDeActivo"
+    },
+    "SkimmingReciboCondonación" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingReciboCondonación"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "Empleado" : {
+      "@id" : "http://purl.org/ontology/onfraud#Empleado"
+    },
+    "RoboEfectivo" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboEfectivo"
+    },
+    "Corruption" : {
+      "@id" : "http://dbpedia.org/resource/Corruption"
+    },
+    "AnulacionFalsa" : {
+      "@id" : "http://purl.org/ontology/onfraud#AnulacionFalsa"
+    },
+    "FalsificaciónCheque" : {
+      "@id" : "http://purl.org/ontology/onfraud#FalsificaciónCheque"
+    },
+    "ReintegroGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#ReintegroGastos"
+    },
+    "HurtoFondosRegistrados" : {
+      "@id" : "http://purl.org/ontology/onfraud#HurtoFondosRegistrados"
+    },
+    "Victima" : {
+      "@id" : "http://purl.org/ontology/onfraud#Victima"
+    },
+    "hasCurrency" : {
+      "@id" : "http://purl.org/goodrelations/v1#hasCurrency"
+    },
+    "EsquemaDeLicitación" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeLicitación"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "SUBOcultaciónPasivosGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBOcultaciónPasivosGastos"
+    },
+    "ManipulaciónBeneficiario" : {
+      "@id" : "http://purl.org/ontology/onfraud#ManipulaciónBeneficiario"
+    },
+    "RoboDeposito" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboDeposito"
+    },
+    "PagosFraudulentosRegistroDesembolso" : {
+      "@id" : "http://purl.org/ontology/onfraud#PagosFraudulentosRegistroDesembolso"
+    },
+    "causaPerjuicioEconomico" : {
+      "@id" : "http://purl.org/ontology/onfraud#causaPerjuicioEconomico",
+      "@type" : "@id"
+    },
+    "GratuidadIlegal" : {
+      "@id" : "http://purl.org/ontology/onfraud#GratuidadIlegal"
+    },
+    "SOEIngresosFicticios" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEIngresosFicticios"
+    },
+    "Activity" : {
+      "@id" : "http://dbpedia.org/ontology/Activity"
+    },
+    "afectaA" : {
+      "@id" : "http://purl.org/ontology/onfraud#afectaA",
+      "@type" : "@id"
+    },
+    "SUBCorteTemporal" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBCorteTemporal"
+    },
+    "realizaInvestigacion" : {
+      "@id" : "http://purl.org/ontology/onfraud#realizaInvestigacion",
+      "@type" : "@id"
+    },
+    "FormalOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#FormalOrganization"
+    },
+    "RoboActivoFinanciero" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboActivoFinanciero"
+    },
+    "GastosFicticio" : {
+      "@id" : "http://purl.org/ontology/onfraud#GastosFicticio"
+    },
+    "EmpleadoFantasma" : {
+      "@id" : "http://purl.org/ontology/onfraud#EmpleadoFantasma"
+    },
+    "GastoValorSobreestimado" : {
+      "@id" : "http://purl.org/ontology/onfraud#GastoValorSobreestimado"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "SobreestimaciónDeActivosEIngresos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SobreestimaciónDeActivosEIngresos"
+    },
+    "note" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#note"
+    },
+    "RoboEnCompraRecepción" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboEnCompraRecepción"
+    },
+    "FalsificacionEmisor" : {
+      "@id" : "http://purl.org/ontology/onfraud#FalsificacionEmisor"
+    },
+    "EsquemaDeComisiónEnNomina" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeComisiónEnNomina"
+    },
+    "GastoPersonal" : {
+      "@id" : "http://purl.org/ontology/onfraud#GastoPersonal"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "PagosFraudulentosEsquemaFacturación" : {
+      "@id" : "http://purl.org/ontology/onfraud#PagosFraudulentosEsquemaFacturación"
+    },
+    "Fraude" : {
+      "@id" : "http://purl.org/ontology/onfraud#Fraude"
+    },
+    "realizaProcedimientoForense" : {
+      "@id" : "http://purl.org/ontology/onfraud#realizaProcedimientoForense",
+      "@type" : "@id"
+    },
+    "EquipoForensic" : {
+      "@id" : "http://purl.org/ontology/onfraud#EquipoForensic"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "afectaAVictima" : {
+      "@id" : "http://purl.org/ontology/onfraud#afectaAVictima",
+      "@type" : "@id"
+    },
+    "Prevencion" : {
+      "@id" : "http://purl.org/ontology/onfraud#Prevencion"
+    },
+    "descripcion" : {
+      "@id" : "http://purl.org/ontology/onfraud#descripcion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Work" : {
+      "@id" : "http://dbpedia.org/ontology/Work"
+    },
+    "RoboActivoNoFinanciero" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboActivoNoFinanciero"
+    },
+    "Corrupción" : {
+      "@id" : "http://purl.org/ontology/onfraud#Corrupción"
+    },
+    "MultiplesReintegros" : {
+      "@id" : "http://purl.org/ontology/onfraud#MultiplesReintegros"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "Larceny" : {
+      "@id" : "http://dbpedia.org/resource/Larceny"
+    },
+    "noticeDate" : {
+      "@id" : "http://purl.org/purchase2pay/individuals/noticeDate"
+    },
+    "ProcedimientoForense" : {
+      "@id" : "http://purl.org/ontology/onfraud#ProcedimientoForense"
+    },
+    "ManipulaciónEndoso" : {
+      "@id" : "http://purl.org/ontology/onfraud#ManipulaciónEndoso"
+    },
+    "SikimmingDevolucion" : {
+      "@id" : "http://purl.org/ontology/onfraud#SikimmingDevolucion"
+    },
+    "EsquemaDeCompra" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeCompra"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "idFraude" : {
+      "@id" : "http://purl.org/ontology/onfraud#idFraude",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Defraudador" : {
+      "@id" : "http://purl.org/ontology/onfraud#Defraudador"
+    },
+    "SOEManipulaciónValor" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEManipulaciónValor"
+    },
+    "bribery" : {
+      "@id" : "http://dbpedia.org/resource/bribery"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "calculaPerjuicioEconomico" : {
+      "@id" : "http://purl.org/ontology/onfraud#calculaPerjuicioEconomico",
+      "@type" : "@id"
+    },
+    "perjuicio" : {
+      "@id" : "http://purl.org/ontology/onfraud#perjuicio",
+      "@type" : "http://www.w3.org/2002/07/owl#real"
+    },
+    "ApropiacionDeActivos" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiacionDeActivos"
+    },
+    "descripcionRedFlag" : {
+      "@id" : "http://purl.org/ontology/onfraud#descripcionRedFlag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "VentasDepreciadas" : {
+      "@id" : "http://purl.org/ontology/onfraud#VentasDepreciadas"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "Fraudster" : {
+      "@id" : "http://dbpedia.org/resource/Fraudster"
+    },
+    "Employee" : {
+      "@id" : "http://dbpedia.org/resource/Employee"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "RoboPorVentaYEntregaFalsa" : {
+      "@id" : "http://purl.org/ontology/onfraud#RoboPorVentaYEntregaFalsa"
+    },
+    "Extorsión" : {
+      "@id" : "http://purl.org/ontology/onfraud#Extorsión"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.w3.org/ns/org#hasUnit"
+    },
+    "ShellCompany" : {
+      "@id" : "http://purl.org/ontology/onfraud#ShellCompany"
+    },
+    "SOEOcultaciónPasivosGastos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEOcultaciónPasivosGastos"
+    },
+    "Employer" : {
+      "@id" : "http://dbpedia.org/ontology/Employer"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "EsquemaDeComisionPorSoborno" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeComisionPorSoborno"
+    },
+    "supplier" : {
+      "@id" : "http://purl.org/procurement/public-contracts#supplier"
+    },
+    "notice" : {
+      "@id" : "http://purl.org/purchase2pay/individuals/notice"
+    },
+    "worksIn" : {
+      "@id" : "http://purl.org/ontology/onfraud#worksIn",
+      "@type" : "@id"
+    },
+    "SUBIngresosFicticios" : {
+      "@id" : "http://purl.org/ontology/onfraud#SUBIngresosFicticios"
+    },
+    "memberOf" : {
+      "@id" : "http://www.w3.org/ns/org#memberOf",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "SubestimaciónDeActivosEIngresos" : {
+      "@id" : "http://purl.org/ontology/onfraud#SubestimaciónDeActivosEIngresos"
+    },
+    "FraudeExterno" : {
+      "@id" : "http://purl.org/ontology/onfraud#FraudeExterno"
+    },
+    "ApropiaciónDeActivosDeNaturalezaNoFinanciera" : {
+      "@id" : "http://purl.org/ontology/onfraud#ApropiaciónDeActivosDeNaturalezaNoFinanciera"
+    },
+    "DevolucionFalsa" : {
+      "@id" : "http://purl.org/ontology/onfraud#DevolucionFalsa"
+    },
+    "asignadoA" : {
+      "@id" : "http://purl.org/ontology/onfraud#asignadoA",
+      "@type" : "@id"
+    },
+    "cometeFraude" : {
+      "@id" : "http://purl.org/ontology/onfraud#cometeFraude",
+      "@type" : "@id"
+    },
+    "ConflictoDeInteres" : {
+      "@id" : "http://purl.org/ontology/onfraud#ConflictoDeInteres"
+    },
+    "Robo" : {
+      "@id" : "http://purl.org/ontology/onfraud#Robo"
+    },
+    "Theft" : {
+      "@id" : "http://dbpedia.org/resource/Theft"
+    },
+    "OrganizationalUnit" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    "PerjuicioEconómico" : {
+      "@id" : "http://purl.org/ontology/onfraud#PerjuicioEconómico"
+    },
+    "FalsificaciónSalario" : {
+      "@id" : "http://purl.org/ontology/onfraud#FalsificaciónSalario"
+    },
+    "SkimmingVentasSinRegistro" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingVentasSinRegistro"
+    },
+    "SkimmingRecibo" : {
+      "@id" : "http://purl.org/ontology/onfraud#SkimmingRecibo"
+    },
+    "Conflict_of_Interest" : {
+      "@id" : "http://dbpedia.org/resource/Conflict_of_Interest"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "identifica" : {
+      "@id" : "http://purl.org/ontology/onfraud#identifica",
+      "@type" : "@id"
+    },
+    "EsquemaDeVenta" : {
+      "@id" : "http://purl.org/ontology/onfraud#EsquemaDeVenta"
+    },
+    "SOEInformaciónRelevante" : {
+      "@id" : "http://purl.org/ontology/onfraud#SOEInformaciónRelevante"
+    },
+    "PagoFraudulentoNomina" : {
+      "@id" : "http://purl.org/ontology/onfraud#PagoFraudulentoNomina"
+    }
+  }
+}
