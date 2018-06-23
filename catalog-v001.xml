@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv10_1_rdf_enlazada.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv8_1rdf.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="duplicate:http://www.w3.org/ns/org" uri="onfraudv10_2_rdf_enlazada.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="duplicate:http://www.w3.org/ns/org" uri="onfraudv8_2_rdf.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="shadowed:http://purl.org/ontology/onfraud" uri="Versiones%20Anteriores/onfraudv8rdf.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="shadowed:http://purl.org/ontology/onfraud" uri="Versiones%20Anteriores/onfraudv9_rdf_enlazada.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529257054531" name="shadowed:http://purl.org/ontology/onfraud" uri="Versiones%20Anteriores/OnToology/onfraudv4.owl/documentation/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1529745498843" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv10_1_rdf_enlazada.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1529745498843" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv8_1rdf.owl"/>
     </group>
 </catalog>
