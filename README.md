@@ -21,9 +21,9 @@ Como parte de la elaboración del *dashboard*, se han utilizado los datos enlaza
 
 El archivo "README_DatosAnotados" contiene la información relativa a cómo fueron generados esos datos. El esqueleto de RDF generado se puede observar en las siguientes imágenes:
 
-![Alineamiento 1](https://github.com/datalavidaloca/onfraud/img/esqueleto-1.png?raw=true)
+![Alineamiento 1](https://github.com/datalavidaloca/onfraud/blob/master/img/esqueleto-1.png?raw=true)
 
-![Alineamiento 2](https://github.com/datalavidaloca/onfraud/img/esqueleto-2.png?raw=true)
+![Alineamiento 2](https://github.com/datalavidaloca/onfraud/blob/master/img/esqueleto-2.png?raw=true)
 
 ##Dashboard
 Se ha generado un *dashboard* a modo de prueba de concepto para visualizar y explotar datos abiertos desde una perspectiva de prevención de fraude.
