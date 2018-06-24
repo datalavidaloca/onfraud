@@ -1,0 +1,55 @@
+{
+  "@context" : {
+    "contractingAuthority" : {
+      "@id" : "http://purl.org/procurement/public-contracts#contractingAuthority"
+    },
+    "isUnitOf" : {
+      "@id" : "http://www.w3.org/ns/org#isUnitOf"
+    },
+    "Organization" : {
+      "@id" : "http://www.w3.org/ns/org#Organization"
+    },
+    "actualPrice" : {
+      "@id" : "http://purl.org/procurement/public-contracts#actualPrice"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#label"
+    },
+    "Contract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Contract"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "BundlePriceSpecification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "FormalizationNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FormalizationNotice"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "supplier" : {
+      "@id" : "http://purl.org/procurement/public-contracts#supplier"
+    },
+    "notice" : {
+      "@id" : "http://purl.org/purchase2pay/individuals/notice"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#sameAs"
+    },
+    "OrganizationalUnit" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    }
+  }
+}
