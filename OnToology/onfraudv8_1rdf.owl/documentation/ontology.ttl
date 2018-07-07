@@ -8,6 +8,8 @@
 
 <http://purl.org/ontology/onfraud#> rdf:type owl:Ontology ;
                                      owl:imports <http://www.w3.org/ns/org#> ;
+                                     <http://purl.org/dc/terms/contributor> "Mariano Fernandez Lopez"^^xsd:string ;
+                                     <http://purl.org/dc/terms/creator> "Raul del Aguila"^^xsd:string ;
                                      <http://purl.org/dc/terms/description> "Ontología de fraude interno financiero."@es ;
                                      <http://purl.org/dc/terms/license> "CC BY-NC-SA 4.0"@es ;
                                      <http://purl.org/dc/terms/title> "OnFraud - Ontología de Fraude Financiero -"@es .
@@ -18,6 +20,10 @@
 
 ###  gr:hasCurrencyValue
 <gr:hasCurrencyValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/date

@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "foaf:Agent" "org:FormalOrganization" "org:OrganizationalCollaboration" "foaf:Organization" "skos:Concept" "prov:Activity" "org:Role" "org:Organization" "gr:BusinessEntity" "org:OrganizationalUnit" "org:ChangeEvent" ; /*classes style*/
+	"gr:BusinessEntity" -> "org:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"org:Organization" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"org:Role" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"org:ChangeEvent" -> "prov:Activity" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"org:OrganizationalCollaboration" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"org:OrganizationalUnit" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+
+}

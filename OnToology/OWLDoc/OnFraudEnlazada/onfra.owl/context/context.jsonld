@@ -1,0 +1,237 @@
+{
+  "@context" : {
+    "BusinessEntity" : {
+      "@id" : "http://purl.org/goodrelations/v1#BusinessEntity"
+    },
+    "role" : {
+      "@id" : "http://www.w3.org/ns/org#role",
+      "@type" : "@id"
+    },
+    "Post" : {
+      "@id" : "http://www.w3.org/ns/org#Post"
+    },
+    "postIn" : {
+      "@id" : "http://www.w3.org/ns/org#postIn",
+      "@type" : "@id"
+    },
+    "member" : {
+      "@id" : "http://www.w3.org/ns/org#member",
+      "@type" : "@id"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "roleProperty" : {
+      "@id" : "http://www.w3.org/ns/org#roleProperty"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "Membership" : {
+      "@id" : "http://www.w3.org/ns/org#Membership"
+    },
+    "siteAddress" : {
+      "@id" : "http://www.w3.org/ns/org#siteAddress",
+      "@type" : "@id"
+    },
+    "holds" : {
+      "@id" : "http://www.w3.org/ns/org#holds",
+      "@type" : "@id"
+    },
+    "Organization" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    },
+    "OrganizationalCollaboration" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalCollaboration"
+    },
+    "transitiveSubOrganizationOf" : {
+      "@id" : "http://www.w3.org/ns/org#transitiveSubOrganizationOf",
+      "@type" : "@id"
+    },
+    "originalOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#originalOrganization",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "subOrganizationOf" : {
+      "@id" : "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type" : "@id"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "linkedTo" : {
+      "@id" : "http://www.w3.org/ns/org#linkedTo",
+      "@type" : "@id"
+    },
+    "Activity" : {
+      "@id" : "http://www.w3.org/ns/prov#Activity"
+    },
+    "siteOf" : {
+      "@id" : "http://www.w3.org/ns/org#siteOf",
+      "@type" : "@id"
+    },
+    "FormalOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#FormalOrganization"
+    },
+    "used" : {
+      "@id" : "http://www.w3.org/ns/prov#used",
+      "@type" : "@id"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "ChangeEvent" : {
+      "@id" : "http://www.w3.org/ns/org#ChangeEvent"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "hasPrimarySite" : {
+      "@id" : "http://www.w3.org/ns/org#hasPrimarySite",
+      "@type" : "@id"
+    },
+    "heldBy" : {
+      "@id" : "http://www.w3.org/ns/org#heldBy",
+      "@type" : "@id"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "Agent" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Agent"
+    },
+    "changedBy" : {
+      "@id" : "http://www.w3.org/ns/org#changedBy",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "Role" : {
+      "@id" : "http://www.w3.org/ns/org#Role"
+    },
+    "hasMembership" : {
+      "@id" : "http://www.w3.org/ns/org#hasMembership",
+      "@type" : "@id"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "hasMember" : {
+      "@id" : "http://www.w3.org/ns/org#hasMember",
+      "@type" : "@id"
+    },
+    "resultingOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#resultingOrganization",
+      "@type" : "@id"
+    },
+    "location" : {
+      "@id" : "http://www.w3.org/ns/org#location",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasSite" : {
+      "@id" : "http://www.w3.org/ns/org#hasSite",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://www.w3.org/ns/org#identifier"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "basedAt" : {
+      "@id" : "http://www.w3.org/ns/org#basedAt",
+      "@type" : "@id"
+    },
+    "remuneration" : {
+      "@id" : "http://www.w3.org/ns/org#remuneration",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "memberDuring" : {
+      "@id" : "http://www.w3.org/ns/org#memberDuring",
+      "@type" : "@id"
+    },
+    "Site" : {
+      "@id" : "http://www.w3.org/ns/org#Site"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.w3.org/ns/org#hasUnit",
+      "@type" : "@id"
+    },
+    "reportsTo" : {
+      "@id" : "http://www.w3.org/ns/org#reportsTo",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "hasSubOrganization" : {
+      "@id" : "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type" : "@id"
+    },
+    "memberOf" : {
+      "@id" : "http://www.w3.org/ns/org#memberOf",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "resultedFrom" : {
+      "@id" : "http://www.w3.org/ns/org#resultedFrom",
+      "@type" : "@id"
+    },
+    "OrganizationalUnit" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    "hasRegisteredSite" : {
+      "@id" : "http://www.w3.org/ns/org#hasRegisteredSite",
+      "@type" : "@id"
+    },
+    "organization" : {
+      "@id" : "http://www.w3.org/ns/org#organization",
+      "@type" : "@id"
+    },
+    "headOf" : {
+      "@id" : "http://www.w3.org/ns/org#headOf",
+      "@type" : "@id"
+    },
+    "unitOf" : {
+      "@id" : "http://www.w3.org/ns/org#unitOf",
+      "@type" : "@id"
+    },
+    "hasPost" : {
+      "@id" : "http://www.w3.org/ns/org#hasPost",
+      "@type" : "@id"
+    },
+    "purpose" : {
+      "@id" : "http://www.w3.org/ns/org#purpose"
+    },
+    "classification" : {
+      "@id" : "http://www.w3.org/ns/org#classification",
+      "@type" : "@id"
+    }
+  }
+}

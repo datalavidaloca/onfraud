@@ -1,5 +1,7 @@
 <http://purl.org/ontology/onfraud#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/ontology/onfraud#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://purl.org/ontology/onfraud#> <http://purl.org/dc/terms/contributor> "Mariano Fern\u00E1ndez L\u00F3pez" .
+<http://purl.org/ontology/onfraud#> <http://purl.org/dc/terms/creator> "Raul del Aguila" .
 <http://purl.org/ontology/onfraud#> <http://purl.org/dc/terms/description> "Ontolog\u00EDa de fraude interno financiero."@es .
 <http://purl.org/ontology/onfraud#> <http://purl.org/dc/terms/license> "CC BY-NC-SA 4.0"@es .
 <http://purl.org/ontology/onfraud#> <http://purl.org/dc/terms/title> "OnFraud - Ontolog\u00EDa de Fraude Financiero -"@es .
@@ -14,6 +16,9 @@
 # 
 # gr:hasCurrencyValue
 <gr:hasCurrencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
