@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1529759454128" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv10_1_rdf_enlazada.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529759454128" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv8_1rdf.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1529759454128" name="shadowed:http://purl.org/ontology/onfraud" uri="OnToology/onfraudv8_1rdf.owl/documentation/ontology.xml"/>
-        <uri id="Automatically generated entry, Timestamp=1529759454128" name="shadowed:http://purl.org/ontology/onfraud" uri="OnToology/onfraudv10_1_rdf_enlazada.owl/documentation/ontology.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1530957640691" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv10_1_rdf_enlazada.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1530957640691" name="duplicate:http://purl.org/ontology/onfraud" uri="onfraudv8_1rdf.owl"/>
     </group>
 </catalog>
