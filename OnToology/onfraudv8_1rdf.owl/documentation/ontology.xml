@@ -19,6 +19,8 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://purl.org/ontology/onfraud#">
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariano Fernandez Lopez</terms:contributor>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raul del Aguila</terms:creator>
         <terms:description xml:lang="es">Ontología de fraude interno financiero.</terms:description>
         <terms:license xml:lang="es">CC BY-NC-SA 4.0</terms:license>
         <terms:title xml:lang="es">OnFraud - Ontología de Fraude Financiero -</terms:title>
@@ -42,6 +44,13 @@
 
 
     <owl:AnnotationProperty rdf:about="gr:hasCurrencyValue"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 

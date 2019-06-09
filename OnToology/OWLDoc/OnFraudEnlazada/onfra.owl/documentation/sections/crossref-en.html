@@ -1,0 +1,1770 @@
+<h2  id="crossreference" class="list">Cross reference for Core organization ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Core organization ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/goodrelations/v1#BusinessEntity" title="http://purl.org/goodrelations/v1#BusinessEntity">
+            <span>business entity</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+      </li>
+      <li>
+         <a href="#OrganizationalCollaboration"
+            title="http://www.w3.org/ns/org#OrganizationalCollaboration">Endeavour</a>
+      </li>
+      <li>
+         <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+      </li>
+      <li>
+         <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+      </li>
+      <li>
+         <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+      </li>
+      <li>
+         <a href="#OrganizationalUnit" title="http://www.w3.org/ns/org#OrganizationalUnit">OrganizationalUnit</a>
+      </li>
+      <li>
+         <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+      </li>
+      <li>
+         <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+      </li>
+      <li>
+         <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/goodrelations/v1#BusinessEntity">
+      <h3>business entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/goodrelations/v1#BusinessEntity</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ChangeEvent">
+      <h3>Change Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#ChangeEvent</p>
+      <div class="comment">
+         <span class="markdown">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. </span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Activity">activity</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#originalOrganization" title="http://www.w3.org/ns/org#originalOrganization">original organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#resultingOrganization" title="http://www.w3.org/ns/org#resultingOrganization">resulted in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#changedBy" title="http://www.w3.org/ns/org#changedBy">changed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#resultedFrom" title="http://www.w3.org/ns/org#resultedFrom">resulted from</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrganizationalCollaboration">
+      <h3>Endeavour<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#OrganizationalCollaboration</p>
+      <div class="comment">
+         <span class="markdown">A collaboration between two or more Organizations such as a project. It meets the criteria for being an Organization in that it has an identity and defining purpose independent of its particular members but is neither a formally recognized legal entity nor a sub-unit within some larger organization. Might typically have a shorter lifetime than the Organizations within it, but not necessarily. All members are `org:Organization`s rather than individuals and those Organizations can play particular roles within the venture. Alternative names: _Project_ _Venture_  _Endeavour_ _Consortium_ _Endeavour_</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#hasMember" title="http://www.w3.org/ns/org#hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FormalOrganization">
+      <h3>Formal Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#FormalOrganization</p>
+      <div class="comment">
+         <span class="markdown">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://xmlns.com/foaf/0.1/Organization">organization</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/goodrelations/v1#BusinessEntity" title="http://purl.org/goodrelations/v1#BusinessEntity">business entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasUnit" title="http://www.w3.org/ns/org#hasUnit">has Unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRegisteredSite" title="http://www.w3.org/ns/org#hasRegisteredSite">registered Site</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#unitOf" title="http://www.w3.org/ns/org#unitOf">unit Of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Membership">
+      <h3>Membership<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Membership</p>
+      <div class="comment">
+         <span class="markdown">Indicates the nature of an Agent's membership of an organization. Represents an n-ary relation between an Agent, an Organization and a Role. It is possible to directly indicate membership, independent of the specific Role, through use of the `org:memberOf` property.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#member" title="http://www.w3.org/ns/org#member">member</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#memberDuring" title="http://www.w3.org/ns/org#memberDuring">member During</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#organization" title="http://www.w3.org/ns/org#organization">organization</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasMembership" title="http://www.w3.org/ns/org#hasMembership">membership</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Organization">
+      <h3>Organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Organization</p>
+      <div class="comment">
+         <span class="markdown">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <span class="dotted" title="http://xmlns.com/foaf/0.1/Organization">organization</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#OrganizationalCollaboration"
+               title="http://www.w3.org/ns/org#OrganizationalCollaboration">Endeavour</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OrganizationalUnit" title="http://www.w3.org/ns/org#OrganizationalUnit">OrganizationalUnit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#changedBy" title="http://www.w3.org/ns/org#changedBy">changed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#classification" title="http://www.w3.org/ns/org#classification">classification</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubOrganization" title="http://www.w3.org/ns/org#hasSubOrganization">has SubOrganization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasMember" title="http://www.w3.org/ns/org#hasMember">has member</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#identifier" title="http://www.w3.org/ns/org#identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#linkedTo" title="http://www.w3.org/ns/org#linkedTo">linked to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPost" title="http://www.w3.org/ns/org#hasPost">post</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPrimarySite" title="http://www.w3.org/ns/org#hasPrimarySite">primary Site</a>
+            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://www.w3.org/ns/org#purpose">purpose</span>, <a href="#resultedFrom" title="http://www.w3.org/ns/org#resultedFrom">resulted from</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transitiveSubOrganizationOf"
+               title="http://www.w3.org/ns/org#transitiveSubOrganizationOf">transitive sub-organization</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasSubOrganization" title="http://www.w3.org/ns/org#hasSubOrganization">has SubOrganization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#headOf" title="http://www.w3.org/ns/org#headOf">head of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#linkedTo" title="http://www.w3.org/ns/org#linkedTo">linked to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#memberOf" title="http://www.w3.org/ns/org#memberOf">member of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#organization" title="http://www.w3.org/ns/org#organization">organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#originalOrganization" title="http://www.w3.org/ns/org#originalOrganization">original organization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#postIn" title="http://www.w3.org/ns/org#postIn">post in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#resultingOrganization" title="http://www.w3.org/ns/org#resultingOrganization">resulted in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#siteOf" title="http://www.w3.org/ns/org#siteOf">site Of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#transitiveSubOrganizationOf"
+               title="http://www.w3.org/ns/org#transitiveSubOrganizationOf">transitive sub-organization</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has keys</dt>
+         <dd>
+            <a href="#identifier" title="http://www.w3.org/ns/org#identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrganizationalUnit">
+      <h3>OrganizationalUnit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#OrganizationalUnit</p>
+      <div class="comment">
+         <span class="markdown">An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#unitOf" title="http://www.w3.org/ns/org#unitOf">unit Of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasUnit" title="http://www.w3.org/ns/org#hasUnit">has Unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Post">
+      <h3>Post<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Post</p>
+      <div class="comment">
+         <span class="markdown">A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#heldBy" title="http://www.w3.org/ns/org#heldBy">held by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#postIn" title="http://www.w3.org/ns/org#postIn">post in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#holds" title="http://www.w3.org/ns/org#holds">holds</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPost" title="http://www.w3.org/ns/org#hasPost">post</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Role">
+      <h3>Role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Role</p>
+      <div class="comment">
+         <span class="markdown">Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of `org:Membership`. It is common for roles to be arranged in some taxonomic structure and we use SKOS to represent that. The normal SKOS lexical properties should be used when labelling the Role. Additional descriptive properties for the Role, such as a Salary band, may be added by extension vocabularies.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#remuneration" title="http://www.w3.org/ns/org#remuneration">remuneration</a>
+            <sup class="type-op" title="object property">op</sup>, <span class="dotted" title="http://www.w3.org/ns/org#roleProperty">role (property)</span>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#role" title="http://www.w3.org/ns/org#role">role</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Site">
+      <h3>Site<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#Site</p>
+      <div class="comment">
+         <span class="markdown">An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#siteAddress" title="http://www.w3.org/ns/org#siteAddress">site Address</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#siteOf" title="http://www.w3.org/ns/org#siteOf">site Of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#basedAt" title="http://www.w3.org/ns/org#basedAt">based At</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasPrimarySite" title="http://www.w3.org/ns/org#hasPrimarySite">primary Site</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRegisteredSite" title="http://www.w3.org/ns/org#hasRegisteredSite">registered Site</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#basedAt" title="http://www.w3.org/ns/org#basedAt">based At</a>
+      </li>
+      <li>
+         <a href="#changedBy" title="http://www.w3.org/ns/org#changedBy">changed by</a>
+      </li>
+      <li>
+         <a href="#classification" title="http://www.w3.org/ns/org#classification">classification</a>
+      </li>
+      <li>
+         <a href="#hasMember" title="http://www.w3.org/ns/org#hasMember">has member</a>
+      </li>
+      <li>
+         <a href="#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+      </li>
+      <li>
+         <a href="#hasSubOrganization" title="http://www.w3.org/ns/org#hasSubOrganization">has SubOrganization</a>
+      </li>
+      <li>
+         <a href="#hasUnit" title="http://www.w3.org/ns/org#hasUnit">has Unit</a>
+      </li>
+      <li>
+         <a href="#headOf" title="http://www.w3.org/ns/org#headOf">head of</a>
+      </li>
+      <li>
+         <a href="#heldBy" title="http://www.w3.org/ns/org#heldBy">held by</a>
+      </li>
+      <li>
+         <a href="#holds" title="http://www.w3.org/ns/org#holds">holds</a>
+      </li>
+      <li>
+         <a href="#linkedTo" title="http://www.w3.org/ns/org#linkedTo">linked to</a>
+      </li>
+      <li>
+         <a href="#member" title="http://www.w3.org/ns/org#member">member</a>
+      </li>
+      <li>
+         <a href="#memberDuring" title="http://www.w3.org/ns/org#memberDuring">member During</a>
+      </li>
+      <li>
+         <a href="#memberOf" title="http://www.w3.org/ns/org#memberOf">member of</a>
+      </li>
+      <li>
+         <a href="#hasMembership" title="http://www.w3.org/ns/org#hasMembership">membership</a>
+      </li>
+      <li>
+         <a href="#organization" title="http://www.w3.org/ns/org#organization">organization</a>
+      </li>
+      <li>
+         <a href="#originalOrganization" title="http://www.w3.org/ns/org#originalOrganization">original organization</a>
+      </li>
+      <li>
+         <a href="#hasPost" title="http://www.w3.org/ns/org#hasPost">post</a>
+      </li>
+      <li>
+         <a href="#postIn" title="http://www.w3.org/ns/org#postIn">post in</a>
+      </li>
+      <li>
+         <a href="#hasPrimarySite" title="http://www.w3.org/ns/org#hasPrimarySite">primary Site</a>
+      </li>
+      <li>
+         <a href="#hasRegisteredSite" title="http://www.w3.org/ns/org#hasRegisteredSite">registered Site</a>
+      </li>
+      <li>
+         <a href="#remuneration" title="http://www.w3.org/ns/org#remuneration">remuneration</a>
+      </li>
+      <li>
+         <a href="#reportsTo" title="http://www.w3.org/ns/org#reportsTo">reports to</a>
+      </li>
+      <li>
+         <a href="#resultedFrom" title="http://www.w3.org/ns/org#resultedFrom">resulted from</a>
+      </li>
+      <li>
+         <a href="#resultingOrganization" title="http://www.w3.org/ns/org#resultingOrganization">resulted in</a>
+      </li>
+      <li>
+         <a href="#role" title="http://www.w3.org/ns/org#role">role</a>
+      </li>
+      <li>
+         <a href="#siteAddress" title="http://www.w3.org/ns/org#siteAddress">site Address</a>
+      </li>
+      <li>
+         <a href="#siteOf" title="http://www.w3.org/ns/org#siteOf">site Of</a>
+      </li>
+      <li>
+         <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+      </li>
+      <li>
+         <a href="#transitiveSubOrganizationOf"
+            title="http://www.w3.org/ns/org#transitiveSubOrganizationOf">transitive sub-organization</a>
+      </li>
+      <li>
+         <a href="#unitOf" title="http://www.w3.org/ns/org#unitOf">unit Of</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/prov#wasDerivedFrom" title="http://www.w3.org/ns/prov#wasDerivedFrom">
+            <span>was derived from</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="basedAt">
+      <h3>based At<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#basedAt</p>
+      <div class="comment">
+         <span class="markdown">Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="changedBy">
+      <h3>changed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#changedBy</p>
+      <div class="comment">
+         <span class="markdown">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#originalOrganization" title="http://www.w3.org/ns/org#originalOrganization">original organization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="classification">
+      <h3>classification<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#classification</p>
+      <div class="comment">
+         <span class="markdown">Indicates a classification for this Organization within some classification scheme. Extension vocabularies may wish to specialize this property to have a range corresponding to a specific `skos:ConceptScheme`. This property is under discussion and may be revised or removed - in many cases organizations are best categorized by defining a sub-class hierarchy in an extension vocabulary.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMember">
+      <h3>has member<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasMember</p>
+      <div class="comment">
+         <span class="markdown">Indicates a person who is a member of the subject Organization. Inverse of `org:memberOf`, see that property for further clarification. Provided for compatibility with `foaf:member`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#memberOf" title="http://www.w3.org/ns/org#memberOf">member of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSite">
+      <h3>has site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasSite</p>
+      <div class="comment">
+         <span class="markdown">Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasPrimarySite" title="http://www.w3.org/ns/org#hasPrimarySite">primary Site</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#siteOf" title="http://www.w3.org/ns/org#siteOf">site Of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubOrganization">
+      <h3>has SubOrganization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasSubOrganization</p>
+      <div class="comment">
+         <span class="markdown">Represents hierarchical containment of Organizations or Organizational Units; indicates an organization which is a sub-part or child of this organization.  Inverse of `org:subOrganizationOf`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasUnit" title="http://www.w3.org/ns/org#hasUnit">has Unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasUnit">
+      <h3>has Unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasUnit</p>
+      <div class="comment">
+         <span class="markdown">Indicates a unit which is part of this Organization, e.g. a Department within a larger FormalOrganization. Inverse of `org:unitOf`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSubOrganization" title="http://www.w3.org/ns/org#hasSubOrganization">has SubOrganization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OrganizationalUnit" title="http://www.w3.org/ns/org#OrganizationalUnit">OrganizationalUnit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#unitOf" title="http://www.w3.org/ns/org#unitOf">unit Of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="headOf">
+      <h3>head of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#headOf</p>
+      <div class="comment">
+         <span class="markdown">Indicates that a person is the leader or formal head of the Organization. This will normally mean that they are the root of the `org:reportsTo` (acyclic) graph, though an organization may have more than one head.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#memberOf" title="http://www.w3.org/ns/org#memberOf">member of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="heldBy">
+      <h3>held by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#heldBy</p>
+      <div class="comment">
+         <span class="markdown">Indicates an Agent which holds a Post.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#holds" title="http://www.w3.org/ns/org#holds">holds</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="holds">
+      <h3>holds<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#holds</p>
+      <div class="comment">
+         <span class="markdown">Indicates a Post held by some Agent.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#heldBy" title="http://www.w3.org/ns/org#heldBy">held by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="linkedTo">
+      <h3>linked to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#linkedTo</p>
+      <div class="comment">
+         <span class="markdown">Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="member">
+      <h3>member<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#member</p>
+      <div class="comment">
+         <span class="markdown">Indicates the Person (or other Agent including Organization) involved in the Membership relationship. Inverse of `org:hasMembership`</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasMembership" title="http://www.w3.org/ns/org#hasMembership">membership</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="memberDuring">
+      <h3>member During<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#memberDuring</p>
+      <div class="comment">
+         <span class="markdown">Optional property to indicate the interval for which the membership is/was valid.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="memberOf">
+      <h3>member of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#memberOf</p>
+      <div class="comment">
+         <span class="markdown">Indicates that a person is a member of the Organization with no indication of the nature of that membership or the role played. Note that the choice of property name is not meant to limit the property to only formal membership arrangements, it is also indended to cover related concepts such as affilliation or other involvement in the organization. Extensions can specialize this relationship to indicate particular roles within the organization or more nuanced relationships to the organization. Has an optional inverse, `org:hasmember`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#headOf" title="http://www.w3.org/ns/org#headOf">head of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasMember" title="http://www.w3.org/ns/org#hasMember">has member</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMembership">
+      <h3>membership<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasMembership</p>
+      <div class="comment">
+         <span class="markdown">Indicates a membership relationship that the Agent plays. Inverse of `org:member`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#member" title="http://www.w3.org/ns/org#member">member</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="organization">
+      <h3>organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#organization</p>
+      <div class="comment">
+         <span class="markdown">Indicates Organization in which the Agent is a member.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="originalOrganization">
+      <h3>original organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#originalOrganization</p>
+      <div class="comment">
+         <span class="markdown">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/prov#used">used</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#changedBy" title="http://www.w3.org/ns/org#changedBy">changed by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPost">
+      <h3>post<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasPost</p>
+      <div class="comment">
+         <span class="markdown">Indicates a Post which exists within the Organization.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#postIn" title="http://www.w3.org/ns/org#postIn">post in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="postIn">
+      <h3>post in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#postIn</p>
+      <div class="comment">
+         <span class="markdown">Indicates the Organization in which the Post exists.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasPost" title="http://www.w3.org/ns/org#hasPost">post</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPrimarySite">
+      <h3>primary Site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasPrimarySite</p>
+      <div class="comment">
+         <span class="markdown">Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasRegisteredSite" title="http://www.w3.org/ns/org#hasRegisteredSite">registered Site</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRegisteredSite">
+      <h3>registered Site<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#hasRegisteredSite</p>
+      <div class="comment">
+         <span class="markdown">Indicates the legally registered site for the organization, in many legal jurisdictions there is a requirement that FormalOrganizations such as Companies or Charities have such a primary designed site. </span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasPrimarySite" title="http://www.w3.org/ns/org#hasPrimarySite">primary Site</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="remuneration">
+      <h3>remuneration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#remuneration</p>
+      <div class="comment">
+         <span class="markdown">Indicates a salary or other reward associated with the role. Typically this will be denoted using an existing representation scheme such as `gr:PriceSpecification` but the range is left open to allow applications to specialize it (e.g. to remunerationInGBP).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="reportsTo">
+      <h3>reports to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#reportsTo</p>
+      <div class="comment">
+         <span class="markdown">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Agent">agent</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resultedFrom">
+      <h3>resulted from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#resultedFrom</p>
+      <div class="comment">
+         <span class="markdown">Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/prov#wasGeneratedBy">was generated by</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#resultingOrganization" title="http://www.w3.org/ns/org#resultingOrganization">resulted in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resultingOrganization">
+      <h3>resulted in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#resultingOrganization</p>
+      <div class="comment">
+         <span class="markdown">Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ChangeEvent" title="http://www.w3.org/ns/org#ChangeEvent">Change Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#resultedFrom" title="http://www.w3.org/ns/org#resultedFrom">resulted from</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="role">
+      <h3>role<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#role</p>
+      <div class="comment">
+         <span class="markdown">Indicates the Role that the Agent plays in a Membership relationship with an Organization.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Membership" title="http://www.w3.org/ns/org#Membership">Membership</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Post" title="http://www.w3.org/ns/org#Post">Post</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Role" title="http://www.w3.org/ns/org#Role">Role</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="siteAddress">
+      <h3>site Address<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#siteAddress</p>
+      <div class="comment">
+         <span class="markdown">Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. </span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="siteOf">
+      <h3>site Of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#siteOf</p>
+      <div class="comment">
+         <span class="markdown">Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Site" title="http://www.w3.org/ns/org#Site">Site</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSite" title="http://www.w3.org/ns/org#hasSite">has site</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subOrganizationOf">
+      <h3>subOrganization of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#subOrganizationOf</p>
+      <div class="comment">
+         <span class="markdown">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization. Inverse of `org:hasSubOrganization`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#transitiveSubOrganizationOf"
+                  title="http://www.w3.org/ns/org#transitiveSubOrganizationOf">transitive sub-organization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#unitOf" title="http://www.w3.org/ns/org#unitOf">unit Of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubOrganization" title="http://www.w3.org/ns/org#hasSubOrganization">has SubOrganization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="transitiveSubOrganizationOf">
+      <h3>transitive sub-organization<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#transitiveSubOrganizationOf</p>
+      <div class="comment">
+         <span class="markdown">The transitive closure of subOrganizationOf, giving a representation of all organizations that contain this one. Note that technically this is a super property of the transitive closure so it could contain additional assertions but such usage is discouraged.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> transitive</p>
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="unitOf">
+      <h3>unit Of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#unitOf</p>
+      <div class="comment">
+         <span class="markdown">Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#subOrganizationOf" title="http://www.w3.org/ns/org#subOrganizationOf">subOrganization of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OrganizationalUnit" title="http://www.w3.org/ns/org#OrganizationalUnit">OrganizationalUnit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FormalOrganization" title="http://www.w3.org/ns/org#FormalOrganization">Formal Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasUnit" title="http://www.w3.org/ns/org#hasUnit">has Unit</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/prov#wasDerivedFrom">
+      <h3>was derived from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#wasDerivedFrom</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#resultedFrom" title="http://www.w3.org/ns/org#resultedFrom">resulted from</a>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">o</span> 
+               <a href="#originalOrganization" title="http://www.w3.org/ns/org#originalOrganization">original organization</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#identifier" title="http://www.w3.org/ns/org#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#location" title="http://www.w3.org/ns/org#location">location</a>
+      </li>
+   </ul>
+   <div class="entity" id="identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#identifier</p>
+      <div class="comment">
+         <span class="markdown">Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#notation">notation</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization" title="http://www.w3.org/ns/org#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="location">
+      <h3>location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/org#location</p>
+      <div class="comment">
+         <span class="markdown">Gives a location description for a person within the organization, for example a _Mail Stop_ for internal posting purposes.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/org">http://www.w3.org/ns/org</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

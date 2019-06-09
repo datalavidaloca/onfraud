@@ -237,6 +237,9 @@
       "@id" : "http://purl.org/ontology/onfraud#realizaProcedimientoForense",
       "@type" : "@id"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
     "EquipoForensic" : {
       "@id" : "http://purl.org/ontology/onfraud#EquipoForensic"
     },
@@ -409,6 +412,9 @@
     },
     "FraudeExterno" : {
       "@id" : "http://purl.org/ontology/onfraud#FraudeExterno"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
     },
     "ConflictoDeInteresPorEsquemaDeVenta" : {
       "@id" : "http://purl.org/ontology/onfraud#ConflictoDeInteresPorEsquemaDeVenta"
